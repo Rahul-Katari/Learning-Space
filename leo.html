@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul's project</title> <!-- More descriptive title -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* font-family: 'Accord'; */
+        }
+
+        :root {
+            --secondary: #F8C215;
+            --black-gradient: radial-gradient(90.5% 76.17% at 54.42% 22.49%, #262728 0%, #252525 100%);
+        }
+
+        .main-container {
+            width: 1920px;
+            height: 8241px;
+            background: #FFF;
+        }
+
+        .background-image-container {
+            position: absolute;
+            width: 1924px;
+            height: 1081px;
+            flex-shrink: 0;
+            background-image: url('./Background_image_1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            fill: radial-gradient(80.93% 140.15% at 7.95% 6.95%, #FFF 45.68%, rgba(255, 255, 255, 0.40) 71.06%, rgba(255, 255, 255, 0.00) 95.28%);
+        }
+
+        .header-container {
+            display: flex;
+            width: 1924px;
+            height: 124px;
+            justify-content: center;
+            align-items: center;
+            gap: 64px;
+            flex-shrink: 0;
+            background: #FFF;
+            box-shadow: 0px 4px 68px 0px rgba(0, 0, 0, 0.06);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0px 4px 68px 0px rgba(0, 0, 0, 0.06);
+        }
+
+        .header-content {
+            display: flex;
+            width: 90%;
+            max-width: 1725px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 64px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 125.995px;
+            height: 53px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .nav-item {
+            color: #252525;
+            font-family: 'Accord', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 8px 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: var(--secondary);
+        }
+
+        .contact-container {
+            display: flex;
+            align-items: center;
+            gap: 42px;
+        }
+
+        .get-in-touch {
+            display: flex;
+            padding: 16px 24px;
+            align-items: center;
+            gap: 12px;
+            transition: background-color 0.3s ease;
+            background-color: white;
+            cursor: pointer;
+            border: 1px solid var(--Secondary, #F8C215);
+        }
+
+        .get-in-touch .text {
+            background: var(--black-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: capitalize;
+            white-space: nowrap;
+        }
+
+        .get-in-touch:hover {
+            background-color: var(--secondary);
+        }
+
+        .get-in-touch:hover .text {
+            -webkit-text-fill-color: #252525;
+        }
+
+        .language-switcher {
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: var(--Black, radial-gradient(90.5% 76.17% at 54.42% 22.49%, #262728 0%, #252525 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            border: none;
+        }
+
+        .language-switcher:hover {
+            opacity: 0.8;
+        }
+
+        .main-content-container {
+            width: 691px;
+            height: 429px;
+            flex-shrink: 0;
+            position: relative;
+            top: 336px;
+            left: 99px;
+            border: #262728;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            align-self: stretch;
+        }
+
+        .main-heading {
+            font-family: Accord;
+            font-size: 90px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 110px;
+            letter-spacing: -1.88px;
+            background: var(--Black, radial-gradient(90.5% 76.17% at 54.42% 22.49%, #262728 0%, #252525 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            height: 205px;
+            align-self: stretch;
+
+        }
+
+        .sub-heading {
+            color: var(--Dark-Gray, #4F4F4F);
+            font-family: Inter;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 36px;
+            width: 678px;
+        }
+
+
+        .explore-Courses-Button-Vertical {
+            display: flex;
+            width: 226px;
+            height: 56px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .explore-Courses-Button-Horizontal {
+            display: flex;
+            height: 56px;
+            padding: 16px 24px;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+            align-self: stretch;
+            background: var(--Secondary, #F8C215);
+            cursor: pointer;
+        }
+
+        .explore-Courses-Button-Horizontal .text {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            /* font-family: Accord; */
+            width: 158px;
+            height: 19px;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: 0.36px;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: var(--Black, radial-gradient(90.5% 76.17% at 54.42% 22.49%, #262728 0%, #252525 100%));
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="background-image-container"></div>
+        <div class="main-content-container">
+            <div class="main-heading"><span>Transform Skills. Transform Future</span></div>
+            <div class="sub-heading"><span>Learning Space helps in ramp your company’s performance and maximize your
+                    productivity and profits.</span></div>
+            <div class="explore-Courses-Button-Container">
+                <div class="explore-Courses-Button-Vertical">
+                    <button class="explore-Courses-Button-Horizontal">
+                        <a href = "#" class="text">EXPLORE COURSES</a>
+                        <img src="Contact Icon Container.png" alt="ARROW">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <header class="header-container">
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="Learning_Space.png" alt="Learning Space Logo">
+                </div>
+                <nav class="nav-menu" aria-label="Main navigation">
+                    <a href="#" class="nav-item">Home</a>
+                    <a href="#" class="nav-item">
+                        Courses
+                        <img src="Down_arrow.png" alt="Expand Menu" aria-hidden="true">
+                    </a>
+                    <a href="#" class="nav-item">Who We Are</a>
+                    <a href="#" class="nav-item">Success Stories</a>
+                    <a href="#" class="nav-item">News</a>
+                    <a href="#" class="nav-item">Media Gallery</a>
+                </nav>
+                <div class="contact-container">
+                    <button class="get-in-touch">
+                        <span class="text">GET IN TOUCH</span>
+                        <img src="Contact Icon Container.png" alt="ARROW">
+                    </button>
+                    <button class="language-switcher">العربية</button>
+                </div>
+            </div>
+        </header>
+    </div>
+</body>
+
+</html>

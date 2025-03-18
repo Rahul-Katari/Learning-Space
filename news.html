@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+</head>
+
+<body>
+    <nav class="flex items-center justify-between px-6 bg-white container">
+        <!-- Logo Section -->
+        <div class="flex items-center">
+            <img src="./assets/images/Logo.png" alt="Logo" class="h-10">
+            <!-- <div class="ml-2">
+                <p class="text-xs text-gray-600">Learning Space</p>
+                <p class="text-xs text-gray-600">مساحة التعلم</p>
+            </div> -->
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="index.html" class="py-8 inline-block">Home</a></li>
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#" class="py-8 inline-block">Courses</a></li>
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#" class="py-8 inline-block">Who We Are</a></li>
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#" class="py-8 inline-block">Success Stories</a></li>
+            <li class="text-yellow-500 border-b-2 border-yellow-500 cursor-pointer"><a href="news.html" class="py-8 inline-block">News</a></li>
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#" class="py-8 inline-block">Latest News</a></li>
+        </ul>
+
+        <!-- Right Section -->
+        <div class="flex items-center space-x-4">
+            <button
+                class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
+                GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+            </button>
+            <span class="text-gray-700 cursor-pointer">العربية</span>
+        </div>
+    </nav>
+    <main>
+        <section class="bg-[#00255D] text-white py-12 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold mb-6">Latest News</h2>
+                <div class="overflow-hidden">
+                    <img src="./assets/images/news/news.png" alt="Latest News" class="w-full h-auto">
+                    <div class="py-6 text-white">
+                        <p class="text-sm">2 Jan 2025</p>
+                        <h3 class="text-2xl font-bold mt-2">
+                            Exploring the Comprehensive Courses at Learning Space
+                        </h3>
+                        <p class="mt-2">
+                            In today’s rapidly evolving digital landscape, continuous learning and skill enhancement are
+                            paramount.
+                            Learning Space, a leading upskilling and reskilling institution in Saudi Arabia, offers a
+                            diverse array
+                            of courses tailored to meet the demands of the modern workforce.
+                        </p>
+                        <a href="news-detail.html" class="mt-6 py-3 uppercase text-yellow-500 font-semibold flex gap-x-3 items-center">
+                            View More <img src="./assets/images/icons/chevron-yellow.png" alt="" class="h-4">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- news cards section start  -->
+        <section>
+            <div class="grid grid-cols-3 container gap-10 my-20">
+                <div class="flex flex-col">
+                    <img src="./assets/images/news/1.png" alt="Women in Tech" class="w-full h-auto">
+                    <div class="py-6 flex flex-col justify-between h-full">
+                        <div>
+                            <p class="text-sm text-gray-500">02 Jan, 2025</p>
+                            <h3 class="text-2xl font-semibold mt-2">Women in Tech: A Growing Movement in KSA</h3>
+                        </div>
+                        <div>
+                            <p class="mt-4 text-gray-600">
+                                Celebrating the rise of women leaders in technology and innovation across the Kingdom.
+                            </p>
+                            <a href="news-detail.html" class="mt-6 py-3 uppercase text-red-500 font-semibold flex gap-x-3 items-center">
+                                View More <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <img src="./assets/images/news/2.png" alt="Women in Tech" class="w-full h-auto">
+                    <div class="py-6 flex flex-col justify-between h-full">
+                        <div>
+                            <p class="text-sm text-gray-500">02 Jan, 2025</p>
+                            <h3 class="text-2xl font-semibold mt-2">Sustainability in Education in 2025</h3>
+                        </div>
+                        <div>
+                            <p class="mt-4 text-gray-600">
+                                Initiatives fostering sustainable practices in schools and training centers across KSA.
+                            </p>
+                            <a href="news-detail.html" class="mt-6 py-3 uppercase text-red-500 font-semibold flex gap-x-3 items-center">
+                                View More <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <img src="./assets/images/news/3.png" alt="Women in Tech" class="w-full h-auto">
+                    <div class="py-6 flex flex-col justify-between h-full">
+                        <div>
+                            <p class="text-sm text-gray-500">02 Jan, 2025</p>
+                            <h3 class="text-2xl font-semibold mt-2">Upskilling Your Workforce in 2025</h3>
+                        </div>
+                        <div>
+                            <p class="mt-4 text-gray-600">
+                                Essential skills to stay competitive in the ever-evolving business landscape of Saudi Arabia.
+                            </p>
+                            <a href="news-detail.html" class="mt-6 py-3 uppercase text-red-500 font-semibold flex gap-x-3 items-center">
+                                View More <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <img src="./assets/images/news/4.png" alt="Women in Tech" class="w-full h-auto">
+                    <div class="py-6 flex flex-col justify-between h-full">
+                        <div>
+                            <p class="text-sm text-gray-500">02 Jan, 2025</p>
+                            <h3 class="text-2xl font-semibold mt-2">Top E-Learning Trends for 2025</h3>
+                        </div>
+                        <div>
+                            <p class="mt-4 text-gray-600">
+                                Insights into the most popular and impactful e-learning methodologies for the upcoming year.
+                            </p>
+                            <a href="news-detail.html" class="mt-6 py-3 uppercase text-red-500 font-semibold flex gap-x-3 items-center">
+                                View More <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <img src="./assets/images/news/5.png" alt="Women in Tech" class="w-full h-auto">
+                    <div class="py-6 flex flex-col justify-between h-full">
+                        <div>
+                            <p class="text-sm text-gray-500">02 Jan, 2025</p>
+                            <h3 class="text-2xl font-semibold mt-2">Corporate Training Success Stories</h3>
+                        </div>
+                        <div>
+                            <p class="mt-4 text-gray-600">
+                                Real-life examples of how Learning Space transformed corporate learning experiences.
+                            </p>
+                            <a href="news-detail.html" class="mt-6 py-3 uppercase text-red-500 font-semibold flex gap-x-3 items-center">
+                                View More <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <img src="./assets/images/news/6.png" alt="Women in Tech" class="w-full h-auto">
+                    <div class="py-6 flex flex-col justify-between h-full">
+                        <div>
+                            <p class="text-sm text-gray-500">02 Jan, 2025</p>
+                            <h3 class="text-2xl font-semibold mt-2">Bridging the Gap Between Market and Skills</h3>
+                        </div>
+                        <div>
+                            <p class="mt-4 text-gray-600">
+                                How tailored education programs are addressing skills shortages in KSA.
+                            </p>
+                            <a href="news-detail.html" class="mt-6 py-3 uppercase text-red-500 font-semibold flex gap-x-3 items-center">
+                                View More <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 px-6">
+        <div class="container mx-auto">
+            <!-- Top Section -->
+            <div class="flex grid-cols-1 md:grid-cols-3 gap-8 justify-between">
+                <!-- Links -->
+                <div class="grid grid-cols-2 gap-6 text-gray-900">
+                    <div>
+                        <h4 class="font-semibold">Courses</h4>
+                        <ul class="mt-2 space-y-2">
+                            <li><a href="#" class="hover:underline">Who We Are</a></li>
+                            <li><a href="#" class="hover:underline">Success Stories</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">News</h4>
+                        <ul class="mt-2 space-y-2">
+                            <li><a href="#" class="hover:underline">Media Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Logo -->
+                <div class="flex justify-center md:justify-end">
+                    <img src="./assets/images/Logo.png" alt="Learning Space Logo" class="h-12">
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-6 border-gray-300">
+
+            <!-- Bottom Section -->
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-700 text-sm">
+                <div class="flex flex-col space-y-2">
+                    <p>Riyadh King Abdul Aziz Branch Rd, </p>
+                    <p>Alyasmin, Riyadh 13322, KSA</p>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-gray-400 text-xs">© 2024 LEARNING SPACE COMPANY, INC. ALL RIGHTS RESERVED.</p>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-4 mt-4 md:mt-0 justify-end">
+                        <a href="#" class="text-gray-700 hover:text-black">
+                            <img src="./assets/images/icons/social/linkedin.png" alt="">
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-black">
+                            <img src="./assets/images/icons/social/x.png" alt="">
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-black">
+                            <img src="./assets/images/icons/social/facebook.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
