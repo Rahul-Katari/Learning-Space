@@ -12,49 +12,50 @@
 </head>
 
 <body>
-    <nav class="flex items-center justify-between px-6 bg-white container">
-        <!-- Logo Section -->
-        <div class="flex items-center">
-            <img src="./assets/images/Logo.png" alt="Logo" class="h-10">
-            <!-- <div class="ml-2">
-                <p class="text-xs text-gray-600">Learning Space</p>
-                <p class="text-xs text-gray-600">مساحة التعلم</p>
-            </div> -->
-        </div>
+    <nav class="bg-white relative">
+        <div class="flex items-center justify-between px-6 container">
+            <!-- Logo Section -->
+            <div class="flex items-center">
+                <img src="./assets/images/Logo.png" alt="Logo" class="h-10">
+            </div>
 
-        <!-- Navigation Links -->
-        <ul class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="index.html"
-                    class="py-8 inline-block">Home</a></li>
-            <li class="text-yellow-500 border-b-2 border-yellow-500 cursor-pointer"><a href="courses.html"
-                    class="py-8 inline-block">Courses</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
-                    class="py-8 inline-block">Who We Are</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
-                    class="py-8 inline-block">Success Stories</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="news.html"
-                    class="py-8 inline-block">News</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
-                    class="py-8 inline-block">Latest News</a></li>
-        </ul>
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
+                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="index.html"
+                        class="py-8 inline-block">Home</a></li>
+                <li class="text-yellow-500 border-b-2 border-yellow-500 cursor-pointer"><a href="courses.html"
+                        class="py-8 inline-block">Courses</a></li>
+                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
+                        class="py-8 inline-block">Who We Are</a></li>
+                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
+                        class="py-8 inline-block">Success Stories</a></li>
+                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="news.html"
+                        class="py-8 inline-block">News</a></li>
+                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
+                        class="py-8 inline-block">Latest News</a></li>
+            </ul>
 
-        <!-- Right Section -->
-        <div class="flex items-center space-x-4">
-            <button
-                class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
-                GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
-            </button>
-            <span class="text-gray-700 cursor-pointer">العربية</span>
+            <!-- Right Section -->
+            <div class="flex items-center space-x-4">
+                <button
+                    class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
+                    GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+                </button>
+                <span class="text-gray-700 cursor-pointer">العربية</span>
+            </div>
         </div>
     </nav>
+    <script>
+        // Add any necessary script for the navbar here
+    </script>
     <main>
         <section>
-            <div class="container">
+            <div class="container mx-auto px-4">
 
-                <div class=" mx-auto py-8 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
 
                     <!-- Left Side -->
-                    <div class=" space-y-6">
+                    <div class="space-y-6 lg:col-span-3">
                         <!-- Tags -->
                         <div class="flex items-center gap-3 tracking-wide">
                             <span class="bg-red-600 text-white text-xs font-semibold px-2 py-1 flex gap-2 items-center">
@@ -82,7 +83,7 @@
                                     class="h-5" /> </a>
                         </p>
                     </div>
-                    <div class="grid grid-cols-5 gap-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
                         <!-- left side  -->
                         <div class="lg:col-span-3">
                             <!-- Course Image -->
@@ -152,47 +153,40 @@
         </section>
         <!-- overview section  -->
         <section>
-            <div class="container">
-                <div class="mx-auto py-10 space-y-6">
-                    <div class="grid grid-cols-2 items-center">
-                        <!-- Overview Title and Arrow -->
-                        <div class="flex items-center justify-start gap-4">
-                            <h2 class="text-2xl font-semibold text-gray-900">Overview</h2>
-                            <img src="./assets/images/courses/course-details/arrow.png" alt="Arrow"
-                                class="h-28 w-auto" />
-                        </div>
-
-                        <!-- Overview Description -->
-                        <p class="text-gray-700 leading-relaxed max-w-3xl">
-                            The AWS Certified AI Practitioner training is designed to help individuals develop a
-                            foundational understanding of Machine Learning (ML) and Artificial Intelligence (AI)
-                            services
-                            offered by AWS. It prepares participants to pass the AWS Certified AI Practitioner exam by
-                            covering key concepts, best practices, and core services used by AWS to implement AI and ML
-                            solutions.
-                        </p>
-                    </div>
-                    <!-- Course Objectives Box -->
-                    <div class="border border-yellow-300 border-l-4 p-6">
-                        <h3 class="font-semibold text-gray-900 mb-4">Course Objectives</h3>
-                        <ul class="space-y-2 text-sm text-gray-800 list-disc pl-5">
-                            <li>Learn how to use AWS AI and ML services such as SageMaker, Recognition, and Lex.</li>
-                            <li>Understand AWS solutions for AI/ML workflows, model building, and deployment.</li>
-                            <li>Develop basic AI and ML models using AWS services.</li>
-                            <li>Prepare for the AWS Certified AI Practitioner exam.</li>
-                            <li>Understand the fundamental concepts of AI and ML.</li>
-                        </ul>
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 items-center py-10 space-y-6">
+                    <div class="flex items-center justify-start gap-4">
+                        <h2 class="text-2xl font-semibold text-gray-900">Overview</h2>
+                        <img src="./assets/images/courses/course-details/arrow.png" alt="Arrow"
+                            class="h-28 w-auto" />
                     </div>
 
-                    <!-- Decorative Bottom Border -->
-                    <!-- <div class="border-t-2 border-red-300 mt-8"></div> -->
+                    <!-- Overview Description -->
+                    <p class="text-gray-700 leading-relaxed max-w-3xl">
+                        The AWS Certified AI Practitioner training is designed to help individuals develop a
+                        foundational understanding of Machine Learning (ML) and Artificial Intelligence (AI)
+                        services
+                        offered by AWS. It prepares participants to pass the AWS Certified AI Practitioner exam by
+                        covering key concepts, best practices, and core services used by AWS to implement AI and ML
+                        solutions.
+                    </p>
                 </div>
-
+                <!-- Course Objectives Box -->
+                <div class="border border-yellow-300 border-l-4 p-6">
+                    <h3 class="font-semibold text-gray-900 mb-4">Course Objectives</h3>
+                    <ul class="space-y-2 text-sm text-gray-800 list-disc pl-5">
+                        <li>Learn how to use AWS AI and ML services such as SageMaker, Recognition, and Lex.</li>
+                        <li>Understand AWS solutions for AI/ML workflows, model building, and deployment.</li>
+                        <li>Develop basic AI and ML models using AWS services.</li>
+                        <li>Prepare for the AWS Certified AI Practitioner exam.</li>
+                        <li>Understand the fundamental concepts of AI and ML.</li>
+                    </ul>
+                </div>
             </div>
         </section>
         <!-- instructors section  -->
         <section class="">
-            <div class="container">
+            <div class="container mx-auto px-4">
                 <div class="border-t-2 pt-10 border-red-600">
 
                 </div>
@@ -284,14 +278,14 @@
             </div>
         </section>
         <section class="bg-[#00255D]">
-            <div class="container mt-20 py-20">
-                <div class="grid grid-cols-2 justify-between">
+            <div class="container mx-auto px-4 mt-20 py-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 justify-between">
                     <div class="text-white space-y-10">
                         <h5 class="text-4xl font-semibold">Download <br> the Curriculum</h5>
                         <p>Master machine learning, deep learning, and more with the AWS Certified AI Practitioner
                             curriculum. Download now and learn to build powerful AI solutions on the AWS Cloud. Get
                             certified. Get ahead.</p>
-                        <div class="grid grid-cols-3 gap-4">
+                        <div class="grid grid-cols-2 gap-4">
                             <button
                                 class="bg-yellow-500 text-black flex items-center justify-center text-sm gap-3 font-semibold px-2 py-2.5 hover:bg-yellow-600 transition">Download Curriculum <img src="./assets/images/icons/chevron.png" class="h-3" alt=""></button>
                             <button

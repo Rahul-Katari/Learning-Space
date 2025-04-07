@@ -12,39 +12,73 @@
 </head>
 
 <body>
-    <nav class="flex items-center justify-between px-6 bg-white container">
-        <!-- Logo Section -->
-        <div class="flex items-center">
-            <img src="./assets/images/Logo.png" alt="Logo" class="h-10">
-            <!-- <div class="ml-2">
-                <p class="text-xs text-gray-600">Learning Space</p>
-                <p class="text-xs text-gray-600">مساحة التعلم</p>
-            </div> -->
-        </div>
-
-        <!-- Navigation Links -->
-        <ul class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="index.html"
-                    class="py-8 inline-block">Home</a></li>
-            <li class="text-yellow-500 border-b-2 border-yellow-500 cursor-pointer"><a href="courses.html"
-                    class="py-8 inline-block">Courses</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
-                    class="py-8 inline-block">Who We Are</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
-                    class="py-8 inline-block">Success Stories</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="news.html"
-                    class="py-8 inline-block">News</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
-                    class="py-8 inline-block">Latest News</a></li>
-        </ul>
-
-        <!-- Right Section -->
-        <div class="flex items-center space-x-4">
-            <button
-                class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
-                GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+    <nav class="bg-white relative">
+        <div class="container flex flex-wrap items-center justify-between mx-auto md:py-0 py-2">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./assets/images/Logo.png" class="h-10" alt="Learning Space Logo" />
+            </a>
+            <button id="mobile-menu-button" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
             </button>
-            <span class="text-gray-700 cursor-pointer">العربية</span>
+            <div id="mobile-menu" class="ml-auto w-[80%] hidden fixed inset-0 bg-white z-50 p-4 md:hidden">
+                <div class="flex items-center border-b pb-4">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="./assets/images/Logo.png" class="h-10" alt="Learning Space Logo" />
+                    </a>
+                    <button id="close-mobile-menu" class="absolute top-6 right-4 text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="flex flex-col space-y-4 text-sm font-semibold text-gray-700">
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 mb-0"><a href="index.html"
+                            class="py-2 inline-block">Home</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="courses.html"
+                            class="py-2 inline-block">Courses</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Who We Are</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Success Stories</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="news.html"
+                            class="py-2 inline-block">News</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Contact</a></li>
+                </ul>
+            </div>
+            <div id="backdrop" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-40 text-sm font-semibold text-gray-700">
+                <ul class="flex space-x-8">
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 me-0"><a href="index.html"
+                            class="py-2 md:py-8 inline-block">Home</a></li>
+                    <li class="text-yellow-500 border-b-2 border-yellow-500"><a href="courses.html"
+                            class="py-2 md:py-8 inline-block">Courses</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Who We Are</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Success Stories</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="news.html"
+                            class="py-2 md:py-8 inline-block">News</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Contact</a></li>
+                </ul>
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
+                        GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+                    </button>
+                    <span class="text-gray-700 cursor-pointer">العربية</span>
+                </div>
+            </div>
         </div>
     </nav>
     <main>
@@ -53,11 +87,9 @@
                 <img src="./assets/images/courses/banner.png" alt="Latest News" class="w-full h-auto">
             </div>
         </section>
-        <!-- tabs section  -->
+        <!-- tabs section -->
         <section>
-            <div class="container">
-
-
+            <div class="container mx-auto px-4">
                 <div class="mb-4">
                     <ul class="flex flex-wrap justify-center -mb-px font-medium text-center" id="default-styled-tab"
                         data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="bg-yellow-400"
@@ -95,16 +127,13 @@
                     </ul>
                 </div>
                 <div id="default-styled-tab-content">
-                    <!-- software development tab content  -->
                     <div class="hidden p-4 rounded-lg" id="styled-profile" role="tabpanel"
                         aria-labelledby="profile-tab">
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
                             <!-- Card 1 -->
                             <div class="overflow-hidden">
                                 <div class="relative">
-                                    <img src="./assets/images/courses/Image.png"
-                                        alt="Course" class="w-full  object-cover">
+                                    <img src="./assets/images/courses/Image.png" alt="Course" class="w-full object-cover">
                                     <span
                                         class="absolute top-2 left-2 bg-red-600 text-white text-xs px-2 py-1 rounded">★
                                         NEW COURSE</span>
@@ -119,15 +148,17 @@
                                     <h3 class="text-lg font-semibold mb-2">Full-Stack Web Development</h3>
                                     <p class="text-sm mb-4">Master both front-end and back-end technologies, including
                                         HTML, CSS, JavaScript, Node.js, and databases.</p>
-                                    <a href="course-details.html" class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
+                                    <a href="course-details.html"
+                                        class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE
+                                        <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
                                 </div>
                             </div>
 
                             <!-- Card 2 -->
                             <div class="overflow-hidden">
                                 <div class="relative">
-                                    <img src="./assets/images/courses/Image-1.png"
-                                        alt="Course" class="w-full  object-cover">
+                                    <img src="./assets/images/courses/Image-1.png" alt="Course"
+                                        class="w-full object-cover">
                                     <span
                                         class="absolute top-2 left-2 bg-blue-700 text-white text-xs px-2 py-1 rounded">HIGH
                                         BOOKED</span>
@@ -142,7 +173,9 @@
                                     <h3 class="text-lg font-semibold mb-2">AWS Certified AI Practitioner</h3>
                                     <p class="text-sm mb-4">Helps develop a foundational understanding of Machine
                                         Learning and AI services by AWS.</p>
-                                    <a href="course-details.html" class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
+                                    <a href="course-details.html"
+                                        class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE
+                                        <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
                                 </div>
                             </div>
 
@@ -150,7 +183,7 @@
                             <div class="overflow-hidden">
                                 <div class="relative">
                                     <img src="./assets/images/courses/Image-2.png" alt="Course"
-                                        class="w-full  object-cover">
+                                        class="w-full object-cover">
                                     <span
                                         class="absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded">LIVE</span>
                                 </div>
@@ -162,7 +195,9 @@
                                     <h3 class="text-lg font-semibold mb-2">JavaScript Advanced</h3>
                                     <p class="text-sm mb-4">Master advanced front-end and back-end techniques with HTML,
                                         CSS, JS, Node.js and more.</p>
-                                    <a href="course-details.html" class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
+                                    <a href="course-details.html"
+                                        class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE
+                                        <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
                                 </div>
                             </div>
 
@@ -170,7 +205,7 @@
                             <div class="overflow-hidden">
                                 <div class="relative">
                                     <img src="./assets/images/courses/Image-3.png" alt="Course"
-                                        class="w-full  object-cover">
+                                        class="w-full object-cover">
                                     <span
                                         class="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">RECORDED</span>
                                 </div>
@@ -182,7 +217,9 @@
                                     <h3 class="text-lg font-semibold mb-2">Mobile App Development with Flutter</h3>
                                     <p class="text-sm mb-4">Create cross-platform mobile apps using Flutter and Dart,
                                         from UI to backend integration.</p>
-                                    <a href="course-details.html" class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
+                                    <a href="course-details.html"
+                                        class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE
+                                        <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
                                 </div>
                             </div>
 
@@ -190,7 +227,7 @@
                             <div class="overflow-hidden">
                                 <div class="relative">
                                     <img src="./assets/images/courses/Image-4.png" alt="Course"
-                                        class="w-full  object-cover">
+                                        class="w-full object-cover">
                                     <span
                                         class="absolute top-2 right-2 bg-orange-500 text-white text-xs px-2 py-1 rounded">LIVE</span>
                                 </div>
@@ -202,15 +239,17 @@
                                     <h3 class="text-lg font-semibold mb-2">DevOps & Cloud Engineering</h3>
                                     <p class="text-sm mb-4">Explore CI/CD, Kubernetes, AWS, and Azure to streamline
                                         deployment and operations.</p>
-                                    <a href="course-details.html" class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
+                                    <a href="course-details.html"
+                                        class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE
+                                        <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
                                 </div>
                             </div>
 
                             <!-- Card 6 -->
                             <div class="overflow-hidden">
                                 <div class="relative">
-                                    <img src="./assets/images/courses/Image-5.png"
-                                        alt="Course" class="w-full  object-cover">
+                                    <img src="./assets/images/courses/Image-5.png" alt="Course"
+                                        class="w-full object-cover">
                                     <span
                                         class="absolute top-2 left-2 bg-yellow-500 text-white text-xs px-2 py-1 rounded">RECORDED</span>
                                 </div>
@@ -222,7 +261,9 @@
                                     <h3 class="text-lg font-semibold mb-2">Data Structures & Algorithms</h3>
                                     <p class="text-sm mb-4">Strengthen problem-solving skills with hands-on coding
                                         challenges covering algorithms.</p>
-                                    <a href="course-details.html" class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
+                                    <a href="course-details.html"
+                                        class="text-red-500 font-semibold text-sm flex items-center gap-2">VIEW MORE
+                                        <img src="./assets/images/icons/chevron-red.png" alt="" class="h-4"></a>
                                 </div>
                             </div>
                         </div>
@@ -263,20 +304,19 @@
                             next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
                     </div>
                 </div>
-
             </div>
         </section>
-        <!-- instructors section  -->
-        <section class="">
-            <div class="container">
+        <!-- instructors section -->
+        <section>
+            <div class="container mx-auto px-4">
                 <div class="mb-8 border-t-2 pt-10 border-red-600">
-                    <div class="flex">
+                    <div class="flex flex-wrap items-center justify-between">
                         <h4 class="text-3xl font-semibold">Our Top Instructors</h4>
-                        <img src="./assets/images/courses/top-instructors.png" alt="" class="inline h-6 ms-2">
+                        <img src="./assets/images/courses/top-instructors.png" alt="" class="inline h-6">
                     </div>
                     <img src="./assets/images/courses/underline.png" alt="" class="block h-2 mt-2">
                 </div>
-                <div class="grid grid-cols-4 gap-4 container justify-around gap-y-10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                     <!-- 1 -->
                     <div>
                         <img src="./assets/images/courses/instructors/profileMai.jpg" alt="">
@@ -359,82 +399,85 @@
             </div>
         </section>
         <section>
-            <div class="container my-20">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-20 p-8">
+            <div class="container mx-auto px-4 my-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
                     <!-- Left Section -->
                     <div class="flex flex-col justify-between">
                         <div>
-                            <h2 class="text-5xl font-bold text-gray-900">We’d love to hear from you!</h2>
-                            <p class="mt-10 text-gray-700 text-sm">
-                                Our team is here to assist you with any questions, feedback, or support you need. Select
-                                your preferred way to connect, and we’ll be happy to help!
-                            </p>
+                            <div>
+                                <h2 class="text-5xl font-bold text-gray-900">We’d love to hear from you!</h2>
+                                <p class="mt-10 text-gray-700 text-sm">
+                                    Our team is here to assist you with any questions, feedback, or support you need.
+                                    Select
+                                    your preferred way to connect, and we’ll be happy to help!
+                                </p>
+                            </div>
+                            <div class="mt-6 space-y-14">
+                                <div class="flex items-center space-x-4">
+                                    <img src="./assets/images/icons/mail.png" alt="" class="h-5">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Email</h4>
+                                        <p class="text-gray-700">customer.support@learningspace.com</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <img src="./assets/images/icons/location.png" alt="" class="h-8">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Location</h4>
+                                        <p class="text-gray-700">
+                                            Riyadh King Abdul Aziz Branch Rd, Alyasmin, Riyadh 13322, KSA.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <img src="./assets/images/icons/phone.png" alt="" class="h-6">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Phone</h4>
+                                        <p class="text-gray-700">198421</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="mt-6 space-y-14">
-                            <div class="flex items-center space-x-4">
-                                <img src="./assets/images/icons/mail.png" alt="" class="h-5">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Email</h4>
-                                    <p class="text-gray-700">customer.support@learningspace.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <img src="./assets/images/icons/location.png" alt="" class="h-8">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Location</h4>
-                                    <p class="text-gray-700">
-                                        Riyadh King Abdul Aziz Branch Rd, Alyasmin, Riyadh 13322, KSA.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <img src="./assets/images/icons/phone.png" alt="" class="h-6">
-                                <div>
-                                    <h4 class="font-semibold text-gray-900">Phone</h4>
-                                    <p class="text-gray-700">198421</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Right Section -->
-                    <div class="bg-[#00255D] p-16 text-white">
-                        <form class="space-y-6">
-                            <div>
-                                <input type="text"
-                                    class="placeholder-white py-3 p-1 w-full bg-transparent border-b border-gray-300 outline-none focus:border-yellow-500"
-                                    placeholder="Full Name" />
-                            </div>
-                            <div>
-                                <div class="flex items-center border-b border-gray-300">
-                                    <select class="bg-transparent outline-none focus:border-yellow-500">
-                                        <option>+966</option>
+                        <!-- Right Section -->
+                        <div class="bg-[#00255D] p-8 md:p-16 text-white">
+                            <form class="space-y-6">
+                                <div>
+                                    <input type="text"
+                                        class="placeholder-white py-3 p-1 w-full bg-transparent border-b border-gray-300 outline-none focus:border-yellow-500"
+                                        placeholder="Full Name" />
+                                </div>
+                                <div>
+                                    <div class="flex items-center border-b border-gray-300">
+                                        <select class="bg-transparent outline-none focus:border-yellow-500">
+                                            <option>+966</option>
+                                        </select>
+                                        <input type="tel"
+                                            class="placeholder-white py-3 p-1 w-full bg-transparent outline-none"
+                                            placeholder="Mobile Number" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- <label class="block text-sm font-medium">Subject</label> -->
+                                    <select
+                                        class="placeholder-white py-3 p-1 w-full bg-transparent border-b border-gray-300 outline-none focus:border-yellow-500">
+                                        <option>Subject</option>
                                     </select>
-                                    <input type="tel"
-                                        class="placeholder-white py-3 p-1 w-full bg-transparent outline-none"
-                                        placeholder="Mobile Number" />
                                 </div>
-                            </div>
-                            <div>
-                                <!-- <label class="block text-sm font-medium">Subject</label> -->
-                                <select
-                                    class="placeholder-white py-3 p-1 w-full bg-transparent border-b border-gray-300 outline-none focus:border-yellow-500">
-                                    <option>Subject</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium">Message</label>
-                                <textarea
-                                    class="py-3 p-1 w-full bg-transparent border-b border-gray-300 outline-none focus:border-yellow-500"></textarea>
-                            </div>
-                            <button class="bg-yellow-500 text-black font-semibold py-3 px-10  flex items-center gap-4">
-                                SEND MESSAGE <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
-                            </button>
-                        </form>
+                                <div>
+                                    <label class="block text-sm font-medium">Message</label>
+                                    <textarea
+                                        class="py-3 p-1 w-full bg-transparent border-b border-gray-300 outline-none focus:border-yellow-500"></textarea>
+                                </div>
+                                <button
+                                    class="bg-yellow-500 text-black font-semibold py-3 px-10  flex items-center gap-4">
+                                    SEND MESSAGE <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+                                </button>
+                            </form>
+                        </div>
                     </div>
-                </div>
 
-            </div>
+                </div>
         </section>
     </main>
 
@@ -492,8 +535,28 @@
             </div>
         </div>
     </footer>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const backdrop = document.getElementById('backdrop');
 
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            backdrop.classList.remove('hidden');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            backdrop.classList.add('hidden');
+        });
+
+        backdrop.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            backdrop.classList.add('hidden');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
 
 </html>

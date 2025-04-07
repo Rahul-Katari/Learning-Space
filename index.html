@@ -10,40 +10,102 @@
 </head>
 
 <body>
-    <nav class="flex items-center justify-between px-6 bg-white container">
-        <!-- Logo Section -->
-        <div class="flex items-center">
-            <img src="./assets/images/Logo.png" alt="Logo" class="h-10">
-            <!-- <div class="ml-2">
-                <p class="text-xs text-gray-600">Learning Space</p>
-                <p class="text-xs text-gray-600">مساحة التعلم</p>
-            </div> -->
-        </div>
-
-        <!-- Navigation Links -->
-        <ul class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
-            <li class="text-yellow-500 border-b-2 border-yellow-500"><a href="index.html" class="py-8 inline-block">Home</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="courses.html" class="py-8 inline-block">Courses</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#" class="py-8 inline-block">Who We Are</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#" class="py-8 inline-block">Success Stories</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="news.html" class="py-8 inline-block">News</a></li>
-            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#" class="py-8 inline-block">Latest News</a></li>
-        </ul>
-
-        <!-- Right Section -->
-        <div class="flex items-center space-x-4">
-            <a href="get-in-touch.html" class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
-                GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+    <nav class="bg-white relative">
+        <div class="container flex flex-wrap items-center justify-between mx-auto md:py-0 py-2">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./assets/images/Logo.png" class="h-10" alt="Learning Space Logo" />
             </a>
-            <span class="text-gray-700 cursor-pointer">العربية</span>
+            <button id="mobile-menu-button" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div id="mobile-menu" class="ml-auto w-[80%] hidden fixed inset-0 bg-white z-50 p-4 md:hidden">
+                <div class="flex items-center border-b pb-4">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="./assets/images/Logo.png" class="h-10" alt="Learning Space Logo" />
+                    </a>
+                    <button id="close-mobile-menu" class="absolute top-6 right-4 text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="flex flex-col space-y-4 text-sm font-semibold text-gray-700">
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 mb-0"><a href="index.html"
+                            class="py-2 inline-block">Home</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="courses.html"
+                            class="py-2 inline-block">Courses</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Who We Are</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Success Stories</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="news.html"
+                            class="py-2 inline-block">News</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Contact</a></li>
+                </ul>
+            </div>
+            <div id="backdrop" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-40 text-sm font-semibold text-gray-700">
+                <ul class="flex space-x-8">
+                    <li class="text-yellow-500 border-b-2 border-yellow-500"><a href="index.html"
+                            class="py-2 md:py-8 inline-block">Home</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="courses.html"
+                            class="py-2 md:py-8 inline-block">Courses</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Who We Are</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Success Stories</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="news.html"
+                            class="py-2 md:py-8 inline-block">News</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Contact</a></li>
+                </ul>
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
+                        GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+                    </button>
+                    <span class="text-gray-700 cursor-pointer">العربية</span>
+                </div>
+            </div>
         </div>
     </nav>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const backdrop = document.getElementById('backdrop');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            backdrop.classList.remove('hidden');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            backdrop.classList.add('hidden');
+        });
+
+        backdrop.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            backdrop.classList.add('hidden');
+        });
+    </script>
     <main>
         <div class="relative w-full h-screen bg-cover bg-center"
             style="background-image: url('./assets/images/banner.png');">
-            <div class="container">
+            <div class="container mx-auto px-4">
                 <div class="absolute inset-0 bg-white bg-opacity-10"></div>
-                <div class="absolute top-1/3 max-w-lg container">
+                <div class="absolute top-1/3 max-w-lg">
                     <h1 class="text-5xl font-bold text-gray-900 leading-tight">
                         Transform Skills.<br>Transform Future
                     </h1>
@@ -59,9 +121,9 @@
             </div>
         </div>
         <!-- Digital Market Section -->
-        <div class="flex flex-col md:flex-row items-center justify-between">
-            <div class="">
-                <img src="./assets/images/bridge gap.png" alt="Pattern" class="hidden md:block w-3/4">
+        <div class="flex flex-col md:flex-row items-center justify-between px-4">
+            <div class="hidden md:block w-3/4">
+                <img src="./assets/images/bridge gap.png" alt="Pattern">
             </div>
             <div class="md:w-1/2 pe-24">
                 <h2 class="text-4xl font-bold text-gray-900 leading-tight">
@@ -79,7 +141,7 @@
             </div>
 
         </div>
-        <div class="container mx-auto pb-28">
+        <div class="container mx-auto px-4 pb-28">
             <!-- Trusted By Section -->
             <div class="text-center mb-40">
                 <h3 class=" font-semibold text-gray-900 flex gap-x-3 justify-center"><img
@@ -148,7 +210,7 @@
             <!-- Why Our Space? Section -->
             <div class="">
                 <h3 class="text-3xl font-bold text-gray-900">Why Our Space?</h3>
-                <div class="grid md:grid-cols-3 gap-6 mt-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
                     <!-- Feature Card -->
                     <div class="flex space-x-4 border-t border-black">
                         <div>
@@ -180,7 +242,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-[#414141] text-white pt-32 pb-48"
+        <div class="bg-[#414141] text-white pt-32 pb-48 px-4"
             style="background-image: url(./assets/images/skills-bg.png); background-repeat: no-repeat; background-size: contain;">
             <div class="container mx-auto">
                 <div class="flex justify-between">
@@ -196,31 +258,6 @@
                     <div>
                         <img src="./assets/images/Statistics Container.png" alt="" class="h-40">
                     </div>
-                    <!-- <div class="p-6 rounded-lg">
-                    <div class="space-y-6">
-                        <div class="flex items-center space-x-3">
-                            <div class="bg-gray-700 p-2 rotate-12"></div>
-                            <div>
-                                <p class="text-3xl font-bold">+50,000</p>
-                                <p class="text-sm text-gray-300">Trainees</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="bg-gray-700 p-2 rotate-12"></div>
-                            <div>
-                                <p class="text-3xl font-bold">+1,200</p>
-                                <p class="text-sm text-gray-300">Workshops</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <div class="bg-gray-700 p-2 rotate-12"></div>
-                            <div>
-                                <p class="text-3xl font-bold">+300</p>
-                                <p class="text-sm text-gray-300">Designed Solutions</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
                 </div>
                 <!-- Course Categories -->
                 <div class="my-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
