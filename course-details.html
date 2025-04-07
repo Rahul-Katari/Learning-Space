@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <nav class="flex items-center justify-between px-6 bg-white container">
+        <!-- Logo Section -->
+        <div class="flex items-center">
+            <img src="./assets/images/Logo.png" alt="Logo" class="h-10">
+            <!-- <div class="ml-2">
+                <p class="text-xs text-gray-600">Learning Space</p>
+                <p class="text-xs text-gray-600">مساحة التعلم</p>
+            </div> -->
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="index.html"
+                    class="py-8 inline-block">Home</a></li>
+            <li class="text-yellow-500 border-b-2 border-yellow-500 cursor-pointer"><a href="courses.html"
+                    class="py-8 inline-block">Courses</a></li>
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
+                    class="py-8 inline-block">Who We Are</a></li>
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
+                    class="py-8 inline-block">Success Stories</a></li>
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="news.html"
+                    class="py-8 inline-block">News</a></li>
+            <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
+                    class="py-8 inline-block">Latest News</a></li>
+        </ul>
+
+        <!-- Right Section -->
+        <div class="flex items-center space-x-4">
+            <button
+                class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
+                GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+            </button>
+            <span class="text-gray-700 cursor-pointer">العربية</span>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <div class="container">
+
+                <div class=" mx-auto py-8 gap-8">
+
+                    <!-- Left Side -->
+                    <div class=" space-y-6">
+                        <!-- Tags -->
+                        <div class="flex items-center gap-3 tracking-wide">
+                            <span class="bg-red-600 text-white text-xs font-semibold px-2 py-1 flex gap-2 items-center">
+                                <img src="./assets/images/courses/course-details/Icon.png" alt="" class="h-3"> NEW
+                                COURSE</span>
+                            <span class="bg-yellow-500 text-white text-xs font-semibold px-2 py-1">RECORDED</span>
+                        </div>
+
+                        <!-- Heading -->
+                        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">AWS Certified AI Practitioner</h1>
+
+                        <!-- Metadata -->
+                        <div class="flex items-center gap-3 text-sm text-gray-700">
+                            <span class="bg-gray-100 px-2 py-1 rounded">3 Days</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded">18 Hours</span>
+                            <span class="bg-gray-100 px-2 py-1 rounded">Advanced</span>
+                        </div>
+
+                        <!-- Accreditation -->
+                        <p class="text-gray-700 text-sm flex">
+                            Accreditation Number (In-Person): <strong class="pl-2"> 25424</strong> &nbsp; Reference:
+                            <a href="#"
+                                class="text-[#F8C215] hover:underline flex gap-1 items-center font-semibold pl-2">AWS
+                                Website <img src="./assets/images/courses/course-details/chevron-top-right.png"
+                                    class="h-5" /> </a>
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-5 gap-8">
+                        <!-- left side  -->
+                        <div class="lg:col-span-3">
+                            <!-- Course Image -->
+                            <img src="./assets/images/courses/course-details.png" alt="Course Image"
+                                class="py-4 w-full object-cover">
+                        </div>
+                        <!-- Right Side -->
+                        <div class="space-y-8 lg:col-span-2">
+                            <!-- Includes -->
+                            <h3 class="text-lg font-semibold">Course Includes</h3>
+                            <ul class="space-y-4 text-sm text-gray-800">
+                                <li class="flex items-center gap-2">
+                                    <img src="./assets/images/courses/course-details/certified.png" class="h-4" alt="">
+                                    Recognized certificate by TVTC.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <img src="./assets/images/courses/course-details/Forward.png" class="h-4" alt="">
+                                    Video-based content.
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <img src="./assets/images/courses/course-details/Bank Cards.png" class="h-4" alt="">
+                                    Online payment included.
+                                </li>
+                            </ul>
+
+                            <!-- Slot Picker -->
+                            <div>
+                                <h4 class="text-sm font-semibold mb-3">Pick a Slot</h4>
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    <button
+                                        class="border border-gray-300 px-3 py-2 hover:bg-yellow-50 hover:border hover:border-[#F8C215] flex items-center gap-3"><img
+                                            src="./assets/images/courses/course-details/calender.png" class="h-4"
+                                            alt="">28 Feb - 2 Mar 2025</button>
+                                    <button
+                                        class="border border-gray-300 px-3 py-2 hover:bg-yellow-50 hover:border hover:border-[#F8C215] flex items-center gap-3"><img
+                                            src="./assets/images/courses/course-details/calender.png" class="h-4"
+                                            alt="">2 Mar - 5 Mar 2025</button>
+                                    <button
+                                        class="border border-gray-300 px-3 py-2 hover:bg-yellow-50 hover:border hover:border-[#F8C215] flex items-center gap-3"><img
+                                            src="./assets/images/courses/course-details/calender.png" class="h-4"
+                                            alt="">5 Mar - 7 Mar 2025</button>
+                                    <button
+                                        class="border border-gray-300 px-3 py-2 hover:bg-yellow-50 hover:border hover:border-[#F8C215] flex items-center gap-3"><img
+                                            src="./assets/images/courses/course-details/calender.png" class="h-4"
+                                            alt="">8 Mar - 10 Mar 2025</button>
+                                </div>
+                            </div>
+
+                            <!-- CTA Buttons -->
+                            <div class="grid grid-cols-2 gap-4">
+                                <button
+                                    class="bg-yellow-500 flex items-center justify-center text-sm gap-3 font-semibold px-2 py-2.5 hover:bg-yellow-600 transition">ENROLL
+                                    NOW <img src="./assets/images/icons/chevron.png" class="h-3" alt=""></button>
+                                <button
+                                    class="border border-gray-300 px-5 py-2.5 font-semibold hover:bg-gray-100 text-sm transition flex items-center justify-center gap-2">
+                                    DOWNLOAD SYLLABUS <img src="./assets/images/courses/course-details/download.png"
+                                        class="h-3" alt="">
+                                </button>
+                            </div>
+
+                            <p class="text-xs text-gray-500 text-center">All payments are processed securely and
+                                encrypted.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- overview section  -->
+        <section>
+            <div class="container">
+                <div class="mx-auto py-10 space-y-6">
+                    <div class="grid grid-cols-2 items-center">
+                        <!-- Overview Title and Arrow -->
+                        <div class="flex items-center justify-start gap-4">
+                            <h2 class="text-2xl font-semibold text-gray-900">Overview</h2>
+                            <img src="./assets/images/courses/course-details/arrow.png" alt="Arrow"
+                                class="h-28 w-auto" />
+                        </div>
+
+                        <!-- Overview Description -->
+                        <p class="text-gray-700 leading-relaxed max-w-3xl">
+                            The AWS Certified AI Practitioner training is designed to help individuals develop a
+                            foundational understanding of Machine Learning (ML) and Artificial Intelligence (AI)
+                            services
+                            offered by AWS. It prepares participants to pass the AWS Certified AI Practitioner exam by
+                            covering key concepts, best practices, and core services used by AWS to implement AI and ML
+                            solutions.
+                        </p>
+                    </div>
+                    <!-- Course Objectives Box -->
+                    <div class="border border-yellow-300 border-l-4 p-6">
+                        <h3 class="font-semibold text-gray-900 mb-4">Course Objectives</h3>
+                        <ul class="space-y-2 text-sm text-gray-800 list-disc pl-5">
+                            <li>Learn how to use AWS AI and ML services such as SageMaker, Recognition, and Lex.</li>
+                            <li>Understand AWS solutions for AI/ML workflows, model building, and deployment.</li>
+                            <li>Develop basic AI and ML models using AWS services.</li>
+                            <li>Prepare for the AWS Certified AI Practitioner exam.</li>
+                            <li>Understand the fundamental concepts of AI and ML.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Decorative Bottom Border -->
+                    <!-- <div class="border-t-2 border-red-300 mt-8"></div> -->
+                </div>
+
+            </div>
+        </section>
+        <!-- instructors section  -->
+        <section class="">
+            <div class="container">
+                <div class="border-t-2 pt-10 border-red-600">
+
+                </div>
+                <h2 class="text-3xl font-semibold text-gray-900 mb-4">Curriculum</h2>
+
+                <div id="curriculum-accordion" data-accordion="collapse" data-active-classes="bg-white text-gray-900"
+                    data-inactive-classes="text-gray-500">
+                    <!-- Day 01 -->
+                    <h2 id="day1-heading">
+                        <button type="button"
+                            class="flex items-center justify-between w-full py-4 text-left font-semibold text-gray-900 border-b border-gray-200"
+                            data-accordion-target="#day1-body" aria-expanded="true" aria-controls="day1-body">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Day 01</p>
+                                <p class="text-base">Introduction to AI and Machine Learning Concepts</p>
+                            </div>
+                            <svg data-accordion-icon class="w-4 h-4 shrink-0 rotate-180" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="day1-body" class="" aria-labelledby="day1-heading">
+                        <div class="py-4 border-b border-gray-200 space-y-2">
+                            <p class="text-sm text-gray-700"><span class="text-red-500 font-semibold">✶</span> <strong>
+                                    Core AI
+                                    Terminology:</strong> Understanding AI, Machine Learning, Deep Learning, Neural
+                                Networks, and Natural Language Processing.</p>
+                            <p class="text-sm text-gray-700"><span class="text-red-500 font-semibold">✶</span>
+                                <strong>Types of
+                                    Predictions:</strong> Classification, Regression, and Anomaly Detection.
+                            </p>
+                            <p class="text-sm text-gray-700"><span class="text-red-500 font-semibold">✶</span>
+                                <strong>Data Types for
+                                    AI Models:</strong> Structured, Unstructured, and Semi-Structured Data.
+                            </p>
+                            <p class="text-sm text-gray-700"><span class="text-red-500 font-semibold">✶</span>
+                                <strong>Learning
+                                    Patterns:</strong> Introduction to Supervised, Unsupervised, and Reinforcement
+                                Learning.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Day 02 -->
+                    <h2 id="day2-heading">
+                        <button type="button"
+                            class="flex items-center justify-between w-full py-4 text-left font-semibold text-gray-900 border-b border-gray-200"
+                            data-accordion-target="#day2-body" aria-expanded="false" aria-controls="day2-body">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Day 02</p>
+                                <p class="text-base">Practical Applications and Machine Learning Development Lifecycle
+                                </p>
+                            </div>
+                            <svg data-accordion-icon class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="day2-body" class="hidden" aria-labelledby="day2-heading">
+                        <div class="py-4 border-b border-gray-200">
+                            <!-- Add Day 02 content here -->
+                        </div>
+                    </div>
+
+                    <!-- Day 03 -->
+                    <h2 id="day3-heading">
+                        <button type="button"
+                            class="flex items-center justify-between w-full py-4 text-left font-semibold text-gray-900 border-b border-gray-200"
+                            data-accordion-target="#day3-body" aria-expanded="false" aria-controls="day3-body">
+                            <div>
+                                <p class="text-sm font-medium text-gray-500">Day 03</p>
+                                <p class="text-base">Generative AI and Responsible AI Practices</p>
+                            </div>
+                            <svg data-accordion-icon class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" d="M9 5 5 1 1 5" />
+                            </svg>
+                        </button>
+                    </h2>
+                    <div id="day3-body" class="hidden" aria-labelledby="day3-heading">
+                        <div class="py-4 border-b border-gray-200">
+                            <!-- Add Day 03 content here -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="bg-[#00255D]">
+            <div class="container mt-20 py-20">
+                <div class="grid grid-cols-2 justify-between">
+                    <div class="text-white space-y-10">
+                        <h5 class="text-4xl font-semibold">Download <br> the Curriculum</h5>
+                        <p>Master machine learning, deep learning, and more with the AWS Certified AI Practitioner
+                            curriculum. Download now and learn to build powerful AI solutions on the AWS Cloud. Get
+                            certified. Get ahead.</p>
+                        <div class="grid grid-cols-3 gap-4">
+                            <button
+                                class="bg-yellow-500 text-black flex items-center justify-center text-sm gap-3 font-semibold px-2 py-2.5 hover:bg-yellow-600 transition">Download Curriculum <img src="./assets/images/icons/chevron.png" class="h-3" alt=""></button>
+                            <button
+                                class="border border-gray-300 px-5 py-2.5 font-semibold hover:bg-yellow-500 text-sm transition flex items-center justify-center gap-2">
+                                Enroll Now <img src="./assets/images/icons/chevron-yellow.png"
+                                    class="h-3" alt="">
+                            </button>
+                        </div>
+                        <p>
+                            We offer exercises—download our curriculum to explore the full syllabus.
+                        </p>
+                    </div>
+                    <div class="flex justify-end">
+                        <img src="./assets/images/courses/course-details/advanced.png" alt="" class="h-96">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 px-6">
+        <div class="container mx-auto">
+            <!-- Top Section -->
+            <div class="flex grid-cols-1 md:grid-cols-3 gap-8 justify-between">
+                <!-- Links -->
+                <div class="grid grid-cols-2 gap-6 text-gray-900">
+                    <div>
+                        <h4 class="font-semibold">Courses</h4>
+                        <ul class="mt-2 space-y-2">
+                            <li><a href="#" class="hover:underline">Who We Are</a></li>
+                            <li><a href="#" class="hover:underline">Success Stories</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold">News</h4>
+                        <ul class="mt-2 space-y-2">
+                            <li><a href="#" class="hover:underline">Media Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Logo -->
+                <div class="flex justify-center md:justify-end">
+                    <img src="./assets/images/Logo.png" alt="Learning Space Logo" class="h-12">
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-6 border-gray-300">
+
+            <!-- Bottom Section -->
+            <div class="flex flex-col md:flex-row justify-between items-center text-gray-700 text-sm">
+                <div class="flex flex-col space-y-2">
+                    <p>Riyadh King Abdul Aziz Branch Rd, </p>
+                    <p>Alyasmin, Riyadh 13322, KSA</p>
+                </div>
+                <div class="space-y-6">
+                    <p class="text-gray-400 text-xs">© 2024 LEARNING SPACE COMPANY, INC. ALL RIGHTS RESERVED.</p>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-4 mt-4 md:mt-0 justify-end">
+                        <a href="#" class="text-gray-700 hover:text-black">
+                            <img src="./assets/images/icons/social/linkedin.png" alt="">
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-black">
+                            <img src="./assets/images/icons/social/x.png" alt="">
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-black">
+                            <img src="./assets/images/icons/social/facebook.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+
+
+</html>
