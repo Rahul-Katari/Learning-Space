@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <nav class="bg-white relative">
+    <nav class="bg-white relative shadow">
         <div class="container flex flex-wrap items-center justify-between mx-auto md:py-0 py-2">
             <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="./assets/images/Logo.png" class="h-10" alt="Learning Space Logo" />
@@ -48,7 +48,7 @@
                             class="py-2 inline-block">Success Stories</a></li>
                     <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="news.html"
                             class="py-2 inline-block">News</a></li>
-                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="get-in-touch.html"
                             class="py-2 inline-block">Contact</a></li>
                 </ul>
             </div>
@@ -101,15 +101,15 @@
         });
     </script>
     <main>
-        <div class="relative w-full h-screen bg-cover bg-center"
+        <div class="relative w-full md:h-screen h-96 bg-cover bg-center"
             style="background-image: url('./assets/images/banner.png');">
             <div class="container mx-auto px-4">
                 <div class="absolute inset-0 bg-white bg-opacity-10"></div>
-                <div class="absolute top-1/3 max-w-lg">
-                    <h1 class="text-5xl font-bold text-gray-900 leading-tight">
+                <div class="absolute md:top-1/3 top-20 max-w-lg">
+                    <h1 class="md:text-5xl text-3xl font-bold text-gray-900 leading-tight">
                         Transform Skills.<br>Transform Future
                     </h1>
-                    <p class="mt-4 text-gray-700 text-lg">
+                    <p class="mt-4 text-gray-700 md:text-lg">
                         Learning Space helps in ramp your company’s performance and maximize your productivity and
                         profits.
                     </p>
@@ -121,12 +121,12 @@
             </div>
         </div>
         <!-- Digital Market Section -->
-        <div class="flex flex-col md:flex-row items-center justify-between px-4">
+        <div class="flex flex-col md:flex-row items-center justify-between p-4">
             <div class="hidden md:block w-3/4">
                 <img src="./assets/images/bridge gap.png" alt="Pattern">
             </div>
-            <div class="md:w-1/2 pe-24">
-                <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+            <div class="md:w-1/2 md:pe-24">
+                <h2 class="md:text-4xl text-2xl font-bold text-gray-900 leading-tight">
                     Bridge the Gap in the Digital Market
                 </h2>
                 <p class="mt-4 text-gray-700">
@@ -135,13 +135,13 @@
                     the tools to innovate, adapt, and excel in today’s competitive landscape.
                 </p>
                 <button
-                    class="mt-16 px-6 py-3 bg-yellow-500 text-black font-semibold shadow-md hover:bg-yellow-600 transition flex gap-x-3 items-center">
+                    class="md:mt-16 mt-4 px-6 py-3 bg-yellow-500 text-black font-semibold shadow-md hover:bg-yellow-600 transition flex gap-x-3 items-center">
                     FIND OUT MORE <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
                 </button>
             </div>
 
         </div>
-        <div class="container mx-auto px-4 pb-28">
+        <div class="container mx-auto px-4 pb-28 mt-5">
             <!-- Trusted By Section -->
             <div class="text-center mb-40">
                 <h3 class=" font-semibold text-gray-900 flex gap-x-3 justify-center"><img
@@ -242,12 +242,12 @@
                 </div>
             </div>
         </div>
-        <div class="bg-[#414141] text-white pt-32 pb-48 px-4"
-            style="background-image: url(./assets/images/skills-bg.png); background-repeat: no-repeat; background-size: contain;">
+        <div class="bg-[#414141] text-white md:pt-32 py-10 md:pb-48 px-4 bg-cover"
+            style="background-image: url(./assets/images/skills-bg.png); background-repeat: no-repeat;">
             <div class="container mx-auto">
                 <div class="flex justify-between">
                     <!-- Header Section -->
-                    <div class="text-center md:text-left">
+                    <div class="md:text-left">
                         <h2 class="text-4xl font-bold">Elevate Your Skills.<br>Pick Your Subject</h2>
                         <p class="mt-4 text-gray-300">
                             We prepare individuals and organizations to excel in the <br> tech-driven world, shaping the
@@ -255,12 +255,12 @@
                             tomorrow.
                         </p>
                     </div>
-                    <div>
+                    <div class="hidden md:block">
                         <img src="./assets/images/Statistics Container.png" alt="" class="h-40">
                     </div>
                 </div>
                 <!-- Course Categories -->
-                <div class="my-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+                <div class="md:my-24 my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
                     <!-- Card -->
                     <div class="border border-white p-6 py-10">
                         <div>
@@ -268,7 +268,7 @@
                         </div>
                         <h3 class="text-xl font-semibold my-4">Software Development</h3>
                         <p class="leading-10 text-sm mt-2">Embedded System<br> UI Design<br> Software Engineering</p>
-                        <a href="#" class="mt-4 flex items-center gap-3 pt-24">
+                        <a href="#" class="mt-4 flex items-center gap-3 md:pt-24">
                             LEARN MORE <img src="./assets/images/icons/chevron-white.png" alt="Learn More Icon"
                                 class="inline-block">
                         </a>
@@ -279,7 +279,7 @@
                         </div>
                         <h3 class="text-xl font-semibold my-4">Big Data & AI</h3>
                         <p class="leading-10 text-sm mt-2">AI<br> Business Intelligence<br> Software Engineering</p>
-                        <a href="#" class="mt-4 flex items-center gap-3 pt-24">
+                        <a href="#" class="mt-4 flex items-center gap-3 md:pt-24">
                             LEARN MORE <img src="./assets/images/icons/chevron-white.png" alt="Learn More Icon"
                                 class="inline-block">
                         </a>
@@ -292,7 +292,7 @@
                         <p class="leading-10 text-sm mt-2">Information Security Engineering<br> Incident Response<br>
                             Risk
                             Analysis</p>
-                        <a href="#" class="mt-4 flex items-center gap-3 pt-24">
+                        <a href="#" class="mt-4 flex items-center gap-3 md:pt-24">
                             LEARN MORE <img src="./assets/images/icons/chevron-white.png" alt="Learn More Icon"
                                 class="inline-block">
                         </a>
@@ -303,7 +303,7 @@
                         </div>
                         <h3 class="text-xl font-semibold my-4">Infrastructure</h3>
                         <p class="leading-10 text-sm mt-2">Network Engineering<br> Cloud Computing</p>
-                        <a href="#" class="mt-4 flex items-center gap-3 pt-24">
+                        <a href="#" class="mt-4 flex items-center gap-3 md:pt-24">
                             LEARN MORE <img src="./assets/images/icons/chevron-white.png" alt="Learn More Icon"
                                 class="inline-block">
                         </a>
@@ -315,7 +315,7 @@
                         </div>
                         <h3 class="text-xl font-semibold my-4">E-commerce & Digital Marketing</h3>
                         <p class="leading-10 text-sm mt-2">Digital Marketing<br> Ecommerce</p>
-                        <a href="#" class="mt-4 flex items-center gap-3 pt-24">
+                        <a href="#" class="mt-4 flex items-center gap-3 md:pt-24">
                             LEARN MORE <img src="./assets/images/icons/chevron-white.png" alt="Learn More Icon"
                                 class="inline-block">
                         </a>
@@ -327,7 +327,7 @@
                         </div>
                         <h3 class="text-xl font-semibold my-4">Technical Support & Operations</h3>
                         <p class="leading-10 text-sm mt-2">System Administration<br> Infrastructure Support</p>
-                        <a href="#" class="mt-4 flex items-center gap-3 pt-24">
+                        <a href="#" class="mt-4 flex items-center gap-3 md:pt-24">
                             LEARN MORE <img src="./assets/images/icons/chevron-white.png" alt="Learn More Icon"
                                 class="inline-block">
                         </a>

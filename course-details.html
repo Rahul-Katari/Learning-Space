@@ -12,36 +12,72 @@
 </head>
 
 <body>
-    <nav class="bg-white relative">
-        <div class="flex items-center justify-between px-6 container">
-            <!-- Logo Section -->
-            <div class="flex items-center">
-                <img src="./assets/images/Logo.png" alt="Logo" class="h-10">
+    <nav class="bg-white relative shadow">
+        <div class="container flex flex-wrap items-center justify-between mx-auto md:py-0 py-2">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./assets/images/Logo.png" class="h-10" alt="Learning Space Logo" />
+            </a>
+            <button id="mobile-menu-button" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div id="mobile-menu" class="ml-auto w-[80%] hidden fixed inset-0 bg-white z-50 p-4 md:hidden">
+                <div class="flex items-center border-b pb-4">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="./assets/images/Logo.png" class="h-10" alt="Learning Space Logo" />
+                    </a>
+                    <button id="close-mobile-menu" class="absolute top-6 right-4 text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="flex flex-col space-y-4 text-sm font-semibold text-gray-700">
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 mb-0"><a href="index.html"
+                            class="py-2 inline-block">Home</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="courses.html"
+                            class="py-2 inline-block">Courses</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Who We Are</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Success Stories</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="news.html"
+                            class="py-2 inline-block">News</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="get-in-touch.html"
+                            class="py-2 inline-block">Contact</a></li>
+                </ul>
             </div>
-
-            <!-- Navigation Links -->
-            <ul class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
-                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="index.html"
-                        class="py-8 inline-block">Home</a></li>
-                <li class="text-yellow-500 border-b-2 border-yellow-500 cursor-pointer"><a href="courses.html"
-                        class="py-8 inline-block">Courses</a></li>
-                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
-                        class="py-8 inline-block">Who We Are</a></li>
-                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
-                        class="py-8 inline-block">Success Stories</a></li>
-                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="news.html"
-                        class="py-8 inline-block">News</a></li>
-                <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 cursor-pointer"><a href="#"
-                        class="py-8 inline-block">Latest News</a></li>
-            </ul>
-
-            <!-- Right Section -->
-            <div class="flex items-center space-x-4">
-                <button
-                    class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
-                    GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
-                </button>
-                <span class="text-gray-700 cursor-pointer">العربية</span>
+            <div id="backdrop" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-40 text-sm font-semibold text-gray-700">
+                <ul class="flex space-x-8">
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 me-0"><a href="index.html"
+                            class="py-2 md:py-8 inline-block">Home</a></li>
+                    <li class="text-yellow-500 border-b-2 border-yellow-500"><a href="courses.html"
+                            class="py-2 md:py-8 inline-block">Courses</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Who We Are</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Success Stories</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="news.html"
+                            class="py-2 md:py-8 inline-block">News</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Contact</a></li>
+                </ul>
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
+                        GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+                    </button>
+                    <span class="text-gray-700 cursor-pointer">العربية</span>
+                </div>
             </div>
         </div>
     </nav>
@@ -52,7 +88,7 @@
         <section>
             <div class="container mx-auto px-4">
 
-                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                <div class="pt-10">
 
                     <!-- Left Side -->
                     <div class="space-y-6 lg:col-span-3">
@@ -157,8 +193,7 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 items-center py-10 space-y-6">
                     <div class="flex items-center justify-start gap-4">
                         <h2 class="text-2xl font-semibold text-gray-900">Overview</h2>
-                        <img src="./assets/images/courses/course-details/arrow.png" alt="Arrow"
-                            class="h-28 w-auto" />
+                        <img src="./assets/images/courses/course-details/arrow.png" alt="Arrow" class="h-28 w-auto" />
                     </div>
 
                     <!-- Overview Description -->
@@ -287,11 +322,11 @@
                             certified. Get ahead.</p>
                         <div class="grid grid-cols-2 gap-4">
                             <button
-                                class="bg-yellow-500 text-black flex items-center justify-center text-sm gap-3 font-semibold px-2 py-2.5 hover:bg-yellow-600 transition">Download Curriculum <img src="./assets/images/icons/chevron.png" class="h-3" alt=""></button>
+                                class="bg-yellow-500 text-black flex items-center justify-center text-sm gap-3 font-semibold px-2 py-2.5 hover:bg-yellow-600 transition">Download
+                                Curriculum <img src="./assets/images/icons/chevron.png" class="h-3" alt=""></button>
                             <button
                                 class="border border-gray-300 px-5 py-2.5 font-semibold hover:bg-yellow-500 text-sm transition flex items-center justify-center gap-2">
-                                Enroll Now <img src="./assets/images/icons/chevron-yellow.png"
-                                    class="h-3" alt="">
+                                Enroll Now <img src="./assets/images/icons/chevron-yellow.png" class="h-3" alt="">
                             </button>
                         </div>
                         <p>
@@ -362,6 +397,27 @@
         </div>
     </footer>
 </body>
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
+    const backdrop = document.getElementById('backdrop');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+        backdrop.classList.remove('hidden');
+    });
+
+    closeMobileMenu.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        backdrop.classList.add('hidden');
+    });
+
+    backdrop.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        backdrop.classList.add('hidden');
+    });
+</script>
 <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 
 
