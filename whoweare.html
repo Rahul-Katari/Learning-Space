@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Skills Learning Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwind.config.js"></script>
+</head>
+<body class="bg-white">
+    <nav class="bg-white relative shadow">
+        <div class="container flex flex-wrap items-center justify-between mx-auto md:py-0 py-2">
+            <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./assets/images/Logo.png" class="h-10" alt="Learning Space Logo" />
+            </a>
+            <button id="mobile-menu-button" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div id="mobile-menu" class="ml-auto w-[80%] hidden fixed inset-0 bg-white z-50 p-4 md:hidden">
+                <div class="flex items-center border-b pb-4">
+                    <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                        <img src="./assets/images/Logo.png" class="h-10" alt="Learning Space Logo" />
+                    </a>
+                    <button id="close-mobile-menu" class="absolute top-6 right-4 text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <ul class="flex flex-col space-y-4 text-sm font-semibold text-gray-700">
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500 mb-0"><a href="index.html"
+                            class="py-2 inline-block">Home</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="courses.html"
+                            class="py-2 inline-block">Courses</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Who We Are</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 inline-block">Success Stories</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="news.html"
+                            class="py-2 inline-block">News</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="get-in-touch.html"
+                            class="py-2 inline-block">Contact</a></li>
+                </ul>
+            </div>
+            <div id="backdrop" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-40 text-sm font-semibold text-gray-700">
+                <ul class="flex space-x-8">
+                    <li class="text-yellow-500 border-b-2 border-yellow-500"><a href="index.html"
+                            class="py-2 md:py-8 inline-block">Home</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="courses.html"
+                            class="py-2 md:py-8 inline-block">Courses</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="whoweare.html"
+                            class="py-2 md:py-8 inline-block">Who We Are</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Success Stories</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="news.html"
+                            class="py-2 md:py-8 inline-block">News</a></li>
+                    <li class="hover:text-yellow-500 hover:border-b-2 border-yellow-500"><a href="#"
+                            class="py-2 md:py-8 inline-block">Contact</a></li>
+                </ul>
+                <div class="flex items-center space-x-4">
+                    <button
+                        class="border border-yellow-500 text-gray-700 px-4 py-2 flex items-center gap-x-3 text-sm hover:bg-yellow-500 hover:text-white">
+                        GET IN TOUCH <img src="./assets/images/icons/chevron.png" alt="" class="h-4">
+                    </button>
+                    <span class="text-gray-700 cursor-pointer">العربية</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+        const backdrop = document.getElementById('backdrop');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            backdrop.classList.remove('hidden');
+        });
+
+        closeMobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            backdrop.classList.add('hidden');
+        });
+
+        backdrop.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            backdrop.classList.add('hidden');
+        });
+    </script>
+    <!-- Hero Section -->
+    <section class="relative h-[450px] md:h-[500px] lg:h-[600px] w-full overflow-hidden">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/c9d0b1fe1c55a154457940a1122f713924de3772.png-irVIul2ZrYacEoJKiRRBv0cYddLPXT.jpeg" alt="Futuristic golden building in cityscape" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+            <p class="text-white text-sm md:text-base uppercase tracking-widest mb-2 md:mb-4">WHO WE ARE</p>
+            <h1 class="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
+                Your Space to Learn<br>the Future Skills
+            </h1>
+        </div>
+    </section>
+
+    <!-- Learn Today, Lead Tomorrow Section -->
+    <section class="py-16 px-6 md:px-12 lg:px-20 bg-white">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 leading-tight">Learn Today, Lead Tomorrow.</h2>
+                <p class="text-gray-700 mb-8 leading-relaxed max-w-xl">
+                    Learning Space bridges Saudi Arabia's digital skills gap through 
+                    innovation, expert training, and industry partnerships. Committed to 
+                    Vision 2030, we empower individuals and businesses with future-ready skills.
+                </p>
+                <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-6 rounded-md transition duration-300">LEARN MORE</a>
+            </div>
+            <div class="flex justify-center md:justify-end">
+                <div class="border border-blue-200 rounded-lg overflow-hidden shadow-lg">
+                    <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%20111-rPYJkxoulggNKFSjZYxovB6OF95ycA.png" alt="Educational setting with students" class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision and Mission Section -->
+    <section class="py-16 px-6 md:px-12 lg:px-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-0">
+            <!-- Vision Column -->
+            <div class="pr-0 md:pr-12 pb-12 md:pb-0 md:border-r border-gray-200">
+                <h2 class="text-3xl font-bold mb-6 uppercase text-gray-900">OUR VISION</h2>
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">Shape the Future of Learning</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    To become the leading technical and digital skills 
+                    development hub in Saudi Arabia, driving workforce 
+                    transformation in alignment with Vision 2030.
+                </p>
+            </div>
+            
+            <!-- Mission Column -->
+            <div class="pl-0 md:pl-12 pt-12 md:pt-0 border-t md:border-t-0 border-gray-200">
+                <h2 class="text-3xl font-bold mb-6 uppercase text-gray-900">OUR MISSION</h2>
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">Learn. Grow. Succeed</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    To equip individuals and businesses with essential 
+                    skills, fostering innovation, career growth, and a 
+                    knowledge-driven economy.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Difference We Make Section -->
+    <section class="py-16 px-6 md:px-12 lg:px-20 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <!-- Top Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Left Column - Heading -->
+                <div class="md:col-span-1 lg:col-span-2">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-gray-900 leading-tight">The Difference<br>We Make</h2>
+                    <a href="#" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2 px-4 transition duration-300 uppercase text-xs tracking-wider">
+                        View our courses <span class="ml-1">→</span>
+                    </a>
+                </div>
+
+                
+                <!-- Middle Column - Future-Ready Skills -->
+                <div class="md:col-span-1 lg:col-span-1 bg-yellow-400 p-6">
+                    <div class="mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-black">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Future-Ready Skills</h3>
+                    <p class="text-black">
+                        We train learners in AI, cybersecurity, fintech, and other leading fields to keep them ahead of market trends.
+                    </p>
+                </div>
+                
+                <!-- Right Column - Image -->
+                <div class="md:col-span-2 lg:col-span-1 relative h-[250px] md:h-[300px]">
+                    <img src="/assets/images/whoweare/shape2.png" alt="Student with learning materials" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Empty Column -->
+            </div>
+            
+            <!-- Second Row - Industry Certifications -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+                <!-- Empty Left Column -->
+                <div class="md:col-span-2 lg:col-span-1 relative h-[250px] md:h-[300px]">
+                    <img src="/assets/images/whoweare/shape1.png" alt="Student with learning materials" class="w-full h-full object-cover">
+                </div>
+
+
+                
+                <!-- Middle Column - Industry-Recognized Certifications -->
+                <div class="md:col-span-1 bg-red-500 p-6 text-white">
+                    <div class="mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-white">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Industry-Recognized Certifications</h3>
+                    <p class="text-white">
+                        We partner with global leaders like AWS, CompTIA, and EC-Council to provide top-tier certifications.
+                    </p>
+                </div>
+                <div class="md:col-span-2 lg:col-span-1 relative h-[250px] md:h-[300px]">
+                    <img src="/assets/images/whoweare/shape1.png" alt="Student with learning materials" class="w-full h-full object-cover">
+                </div>
+                                <!-- Middle Column - Connecting Talent with Employers -->
+                                <div class="md:col-span-1 bg-pink-100 p-6">
+                                    <div class="mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-black">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-xl font-bold mb-4">Connecting Talent with Employers</h3>
+                                    <p class="text-black">
+                                        Our strong employer network helps match students with the right opportunities, bridging the skills gap.
+                                    </p>
+                                </div>
+                 
+               
+            </div>
+            
+
+    </section>
+
+    <!-- Recruiting Talents Section -->
+<section class="py-16 px-6 md:px-12 lg:px-20 bg-white text-center">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">Recruiting Talents<br>Has Never Been Easier</h2>
+        <p class="text-xl text-gray-700">Three Steps to Recruit Talents</p>
+    </div>
+</section>
+
+<!-- Our Impact Section -->
+<section class="py-16 px-6 md:px-12 lg:px-20 bg-[#414141] text-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Impact</h2>
+            <p class="text-gray-300 max-w-2xl">
+                At Learning Space, we help businesses hire job-ready talent. With screening, soft skills training, and tailored programs, our partners get skilled professionals ready to contribute from day one.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <!-- Graduated Trainees -->
+            <div>
+                <div class="text-yellow-400 mb-4">
+                    <svg width="35" height="35" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M33.4885 40.9301V43.7386C33.4885 44.1826 33.312 44.6085 32.998 44.9225C32.684 45.2366 32.2581 45.413 31.814 45.413C31.37 45.413 30.9441 45.2366 30.63 44.9225C30.316 44.6085 30.1396 44.1826 30.1396 43.7386V40.9479H32.9303C33.1179 40.9479 33.3032 40.9412 33.4885 40.9301ZM30.1396 40.9479H15.0698C12.8494 40.9479 10.72 40.0659 9.14988 38.4958C7.57981 36.9258 6.69775 34.7963 6.69775 32.576V25.6953L19.4546 32.7434C20.8517 33.4951 22.4135 33.8886 24.0001 33.8886C25.5866 33.8886 27.1484 33.4951 28.5456 32.7434L30.1396 31.8638V40.9479ZM33.4885 30.013L41.3024 25.6953V32.576C41.3026 34.6998 40.4955 36.7444 39.0447 38.2956C37.5938 39.8467 35.6077 40.7885 33.4885 40.9301V30.013Z" fill="#F8C215"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M30.1395 29.3118L27.4649 30.7898C26.4001 31.3635 25.2095 31.6638 24 31.6638C22.7905 31.6638 21.5999 31.3635 20.5351 30.7898L1.97358 20.5335C0.709954 19.8348 0 18.6113 0 17.3321C0 16.0506 0.709954 14.8272 1.97358 14.1307L20.5351 3.87222C21.6002 3.29967 22.7907 3 24 3C25.2093 3 26.3998 3.29967 27.4649 3.87222L46.0264 14.1307C47.29 14.8272 48 16.0506 48 17.3321C48 18.6113 47.29 19.8348 46.0264 20.5335L33.4884 27.4611V25.8782C33.4885 25.6583 33.4452 25.4406 33.3609 25.2375C33.2767 25.0345 33.153 24.8501 32.9972 24.695L25.1833 16.8811C25.0279 16.7257 24.8434 16.6025 24.6404 16.5184C24.4374 16.4343 24.2198 16.391 24 16.391C23.7803 16.391 23.5627 16.4343 23.3596 16.5184C23.1566 16.6025 22.9721 16.7257 22.8167 16.8811C22.6614 17.0365 22.5381 17.221 22.454 17.424C22.3699 17.627 22.3266 17.8446 22.3266 18.0644C22.3266 18.2841 22.3699 18.5017 22.454 18.7047C22.5381 18.9078 22.6614 19.0922 22.8167 19.2476L30.1395 26.5725V29.3118Z" fill="#F8C215"/>
+                        </svg>
+                        
+                </div>
+                <h3 class="text-4xl font-bold  mb-2">+50,000</h3>
+                <p class="text-gray-300">Graduated Trainees</p>
+            </div>
+            
+            <!-- Courses Completed -->
+            <div>
+                <div class="text-yellow-400 mb-4">
+                    <svg width="35" height="35" viewBox="0 0 48 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.75 5.70573C16.704 2.51373 9.9 1.03773 4.785 0.479731C2.151 0.185731 0 2.32473 0 4.96473V31.2507C0 33.8907 2.151 36.0297 4.785 36.3207C9.9 36.8817 16.704 38.3547 21.75 41.5497V5.70573ZM26.25 41.5497C31.296 38.3547 38.1 36.8817 43.212 36.3177C45.849 36.0297 48 33.8877 48 31.2477V4.96773C48 2.32773 45.849 0.185729 43.215 0.476729C38.1 1.03773 31.296 2.51373 26.25 5.70573V41.5497Z" fill="#F8C215"/>
+                        </svg>
+                        
+                </div>
+                <h3 class="text-4xl font-bold  mb-2">+750</h3>
+                <p class="text-gray-300">Courses Completed</p>
+            </div>
+            
+            <!-- Expert Instructors -->
+            <div>
+                <div class="text-yellow-400 mb-4">
+                    <svg width="35" height="35" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M43.2121 10.8917H32.8742V6.72597C32.8742 4.74249 31.2605 3.12891 29.277 3.12891H18.7222C16.7387 3.12891 15.1251 4.74249 15.1251 6.72597V10.8917H4.78718C2.15368 10.8917 0.0110914 13.0342 0.0110914 15.6677C0.0110914 18.0599 -0.233892 20.2082 1.57887 22.6241C2.60451 23.991 4.01396 24.9661 5.65477 25.4438L21.5882 30.0829C23.1629 30.5422 24.8361 30.5422 26.4109 30.0829L42.3443 25.4438C43.9851 24.966 45.3945 23.991 46.4202 22.6241C48.2411 20.1973 47.988 18.0269 47.988 15.6677C47.9881 13.0342 45.8456 10.8917 43.2121 10.8917ZM18.1719 6.72597C18.1721 6.58008 18.2301 6.44021 18.3333 6.33706C18.4365 6.2339 18.5763 6.17588 18.7222 6.17573H29.277C29.4229 6.17588 29.5628 6.2339 29.666 6.33706C29.7691 6.44021 29.8272 6.58008 29.8273 6.72597V10.8917H18.1719V6.72597Z" fill="#F8C215"/>
+                        <path d="M43.1962 28.3702C26.0101 33.374 26.2326 33.4752 23.9997 33.4752C21.7827 33.4752 22.3087 33.4671 4.80322 28.3703C2.95751 27.8328 1.32289 26.8422 0.0112305 25.4766V40.0971C0.0112305 42.7306 2.15372 44.8731 4.78732 44.8731H43.2121C45.8456 44.8731 47.9882 42.7306 47.9882 40.0971V25.4766C46.6764 26.8421 45.0418 27.8328 43.1962 28.3702Z" fill="#F8C215"/>
+                        </svg>
+                        
+                </div>
+                <h3 class="text-4xl font-bold mb-2">+80</h3>
+                <p class="text-gray-300">Expert Instructors</p>
+            </div>
+        </div>
+        
+        <div>
+            <a href="#" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-3 px-6 transition duration-300">
+                GET IN TOUCH <span class="ml-1">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- Partnering to Empower Talents Section -->
+<section class="py-16 px-6 md:px-12 lg:px-20 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Left Column - Text Content -->
+            <div class="lg:pr-12 flex flex-col ">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">Partnering to Empower Talents</h2>
+                <p class="text-gray-700 max-w-xl">
+                    We team up with top partners to create learning spaces that help talents reach their goals.
+                </p>
+            </div>
+            
+            <!-- Right Column - Image Grid -->
+            <div class="grid grid-cols-6 gap-4">
+                <!-- Top Left Image -->
+                <div class="overflow-hidden col-span-3">
+                    <img 
+                        src="/assets/images/whoweare/partner3.png?height=300&width=400&query=partnership signing ceremony" 
+                        alt="Partnership signing ceremony" 
+                        class="w-full h-full object-cover "
+                    >
+                </div>
+                
+                <!-- Top Right Image -->
+                <div class="overflow-hidden col-span-3">
+                    <img 
+                        src="/assets/images/whoweare/partner4.png?height=300&width=400&query=business partners exchanging documents" 
+                        alt="Partners exchanging documents" 
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+                
+                <!-- Bottom Left Image -->
+                <div class="overflow-hidden col-span-2">
+                    <img 
+                        src="/assets/images/whoweare/partner2.png?height=300&width=400&query=business partners at conference" 
+                        alt="Partners at conference" 
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+                
+                <!-- Bottom Right Image -->
+                <div class="overflow-hidden col-span-4">
+                    <img 
+                        src="/assets/images/whoweare/partner1.png?height=300&width=400&query=group of business partners at event" 
+                        alt="Group of partners at event" 
+                        class="w-full h-full object-cover"
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Team Section -->
+<section class="py-16 px-6 md:px-12 lg:px-20 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 inline-block relative">
+                Our Team
+                <span class="absolute bottom-0 left-0 w-16 h-1 bg-red-500 -mb-2"></span>
+            </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Team Member 1 -->
+            <div class="bg-white">
+                <div class="mb-4">
+                    <img 
+                        src="/assets/images/whoweare/team1.jpg?height=300&width=300&query=professional headshot of middle eastern man in traditional attire" 
+                        alt="Fahad Al-Mutairi" 
+                        class="w-full h-auto"
+                    >
+                </div>
+                <div class="flex items-center justify-between mb-4">    
+                    <div>
+                <h3 class="text-lg font-bold mb-1">Fahad Al-Mutairi</h3>
+                <p class="text-gray-600 text-sm mb-2">Chief Executive Officer</p>
+            </div>
+            <a href="#" class="inline-block">
+                <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M27.6364 0H4.36364C3.20633 0 2.09642 0.459739 1.27808 1.27808C0.459739 2.09642 0 3.20633 0 4.36364L0 27.6364C0 28.7937 0.459739 29.9036 1.27808 30.7219C2.09642 31.5403 3.20633 32 4.36364 32H27.6364C28.7937 32 29.9036 31.5403 30.7219 30.7219C31.5403 29.9036 32 28.7937 32 27.6364V4.36364C32 3.20633 31.5403 2.09642 30.7219 1.27808C29.9036 0.459739 28.7937 0 27.6364 0ZM10.9091 25.3236C10.9093 25.4124 10.8921 25.5003 10.8583 25.5823C10.8245 25.6644 10.7748 25.739 10.7122 25.8018C10.6495 25.8646 10.5751 25.9145 10.4931 25.9485C10.4111 25.9825 10.3233 26 10.2345 26H7.36C7.27111 26.0002 7.18305 25.9829 7.10088 25.949C7.01872 25.9151 6.94406 25.8653 6.8812 25.8024C6.81835 25.7396 6.76854 25.6649 6.73463 25.5828C6.70073 25.5006 6.6834 25.4125 6.68364 25.3236V13.2727C6.68364 13.0933 6.7549 12.9213 6.88174 12.7945C7.00858 12.6676 7.18062 12.5964 7.36 12.5964H10.2345C10.4136 12.5968 10.5852 12.6683 10.7116 12.7951C10.8381 12.9219 10.9091 13.0937 10.9091 13.2727V25.3236ZM8.79636 11.4545C8.25696 11.4545 7.72967 11.2946 7.28117 10.9949C6.83267 10.6952 6.48311 10.2693 6.27669 9.77096C6.07027 9.27261 6.01626 8.72425 6.12149 8.19521C6.22673 7.66617 6.48647 7.18022 6.86789 6.7988C7.24931 6.41738 7.73526 6.15764 8.2643 6.0524C8.79334 5.94717 9.3417 6.00118 9.84005 6.2076C10.3384 6.41402 10.7643 6.76358 11.064 7.21208C11.3637 7.66058 11.5236 8.18787 11.5236 8.72727C11.5236 9.45059 11.2363 10.1443 10.7248 10.6557C10.2134 11.1672 9.51968 11.4545 8.79636 11.4545ZM25.9345 25.3709C25.9348 25.4526 25.9189 25.5336 25.8877 25.6092C25.8565 25.6847 25.8107 25.7533 25.753 25.8111C25.6952 25.8689 25.6265 25.9147 25.551 25.9459C25.4754 25.977 25.3945 25.993 25.3127 25.9927H22.2218C22.1401 25.993 22.0591 25.977 21.9836 25.9459C21.908 25.9147 21.8394 25.8689 21.7816 25.8111C21.7238 25.7533 21.678 25.6847 21.6468 25.6092C21.6157 25.5336 21.5998 25.4526 21.6 25.3709V19.7255C21.6 18.8818 21.8473 16.0309 19.3945 16.0309C17.4945 16.0309 17.1073 17.9818 17.0309 18.8582V25.3782C17.0309 25.5415 16.9667 25.6983 16.852 25.8147C16.7374 25.931 16.5815 25.9976 16.4182 26H13.4327C13.3512 26 13.2704 25.9839 13.195 25.9526C13.1197 25.9214 13.0513 25.8755 12.9937 25.8178C12.9361 25.76 12.8904 25.6914 12.8594 25.616C12.8283 25.5406 12.8125 25.4598 12.8127 25.3782V13.22C12.8125 13.1384 12.8283 13.0576 12.8594 12.9822C12.8904 12.9067 12.9361 12.8382 12.9937 12.7804C13.0513 12.7227 13.1197 12.6768 13.195 12.6455C13.2704 12.6143 13.3512 12.5982 13.4327 12.5982H16.4182C16.5831 12.5982 16.7413 12.6637 16.8579 12.7803C16.9745 12.8969 17.04 13.0551 17.04 13.22V14.2709C17.7455 13.2109 18.7909 12.3964 21.0218 12.3964C25.9636 12.3964 25.9309 17.0109 25.9309 19.5455L25.9345 25.3709Z" fill="#1B75BB"/>
+                    </svg>
+                    
+            </a>
+                </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="bg-white">
+                <div class="mb-4">
+                    <img 
+                        src="/assets/images/whoweare/team2.jpg?height=300&width=300&query=professional headshot of man with beard in business suit" 
+                        alt="Anas Diab" 
+                        class="w-full h-auto"
+                    >
+                </div>
+                <div class="flex items-center justify-between mb-4">    
+                    <div>
+                <h3 class="text-lg font-bold mb-1">Anas Diab</h3>
+                <p class="text-gray-600 text-sm mb-2">Chief Operating Officer</p>
+                </div>
+                <a href="#" class="inline-block">
+                    <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.6364 0H4.36364C3.20633 0 2.09642 0.459739 1.27808 1.27808C0.459739 2.09642 0 3.20633 0 4.36364L0 27.6364C0 28.7937 0.459739 29.9036 1.27808 30.7219C2.09642 31.5403 3.20633 32 4.36364 32H27.6364C28.7937 32 29.9036 31.5403 30.7219 30.7219C31.5403 29.9036 32 28.7937 32 27.6364V4.36364C32 3.20633 31.5403 2.09642 30.7219 1.27808C29.9036 0.459739 28.7937 0 27.6364 0ZM10.9091 25.3236C10.9093 25.4124 10.8921 25.5003 10.8583 25.5823C10.8245 25.6644 10.7748 25.739 10.7122 25.8018C10.6495 25.8646 10.5751 25.9145 10.4931 25.9485C10.4111 25.9825 10.3233 26 10.2345 26H7.36C7.27111 26.0002 7.18305 25.9829 7.10088 25.949C7.01872 25.9151 6.94406 25.8653 6.8812 25.8024C6.81835 25.7396 6.76854 25.6649 6.73463 25.5828C6.70073 25.5006 6.6834 25.4125 6.68364 25.3236V13.2727C6.68364 13.0933 6.7549 12.9213 6.88174 12.7945C7.00858 12.6676 7.18062 12.5964 7.36 12.5964H10.2345C10.4136 12.5968 10.5852 12.6683 10.7116 12.7951C10.8381 12.9219 10.9091 13.0937 10.9091 13.2727V25.3236ZM8.79636 11.4545C8.25696 11.4545 7.72967 11.2946 7.28117 10.9949C6.83267 10.6952 6.48311 10.2693 6.27669 9.77096C6.07027 9.27261 6.01626 8.72425 6.12149 8.19521C6.22673 7.66617 6.48647 7.18022 6.86789 6.7988C7.24931 6.41738 7.73526 6.15764 8.2643 6.0524C8.79334 5.94717 9.3417 6.00118 9.84005 6.2076C10.3384 6.41402 10.7643 6.76358 11.064 7.21208C11.3637 7.66058 11.5236 8.18787 11.5236 8.72727C11.5236 9.45059 11.2363 10.1443 10.7248 10.6557C10.2134 11.1672 9.51968 11.4545 8.79636 11.4545ZM25.9345 25.3709C25.9348 25.4526 25.9189 25.5336 25.8877 25.6092C25.8565 25.6847 25.8107 25.7533 25.753 25.8111C25.6952 25.8689 25.6265 25.9147 25.551 25.9459C25.4754 25.977 25.3945 25.993 25.3127 25.9927H22.2218C22.1401 25.993 22.0591 25.977 21.9836 25.9459C21.908 25.9147 21.8394 25.8689 21.7816 25.8111C21.7238 25.7533 21.678 25.6847 21.6468 25.6092C21.6157 25.5336 21.5998 25.4526 21.6 25.3709V19.7255C21.6 18.8818 21.8473 16.0309 19.3945 16.0309C17.4945 16.0309 17.1073 17.9818 17.0309 18.8582V25.3782C17.0309 25.5415 16.9667 25.6983 16.852 25.8147C16.7374 25.931 16.5815 25.9976 16.4182 26H13.4327C13.3512 26 13.2704 25.9839 13.195 25.9526C13.1197 25.9214 13.0513 25.8755 12.9937 25.8178C12.9361 25.76 12.8904 25.6914 12.8594 25.616C12.8283 25.5406 12.8125 25.4598 12.8127 25.3782V13.22C12.8125 13.1384 12.8283 13.0576 12.8594 12.9822C12.8904 12.9067 12.9361 12.8382 12.9937 12.7804C13.0513 12.7227 13.1197 12.6768 13.195 12.6455C13.2704 12.6143 13.3512 12.5982 13.4327 12.5982H16.4182C16.5831 12.5982 16.7413 12.6637 16.8579 12.7803C16.9745 12.8969 17.04 13.0551 17.04 13.22V14.2709C17.7455 13.2109 18.7909 12.3964 21.0218 12.3964C25.9636 12.3964 25.9309 17.0109 25.9309 19.5455L25.9345 25.3709Z" fill="#1B75BB"/>
+                        </svg>
+                        
+                </a>
+                </div>
+
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="bg-white">
+                <div class="mb-4">
+                    <img 
+                        src="/assets/images/whoweare/team3.jpg?height=300&width=300&query=professional headshot of middle eastern man in traditional attire smiling" 
+                        alt="Sultan Al-Rashid" 
+                        class="w-full h-auto"
+                    >
+                </div>
+                <div class="flex items-center justify-between mb-4">    
+                    <div>
+                <h3 class="text-lg font-bold mb-1">Sultan Al-Rashid</h3>
+                <p class="text-gray-600 text-sm mb-2">Chief Learning Officer</p>
+                </div>
+                <a href="#" class="inline-block">
+                    <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.6364 0H4.36364C3.20633 0 2.09642 0.459739 1.27808 1.27808C0.459739 2.09642 0 3.20633 0 4.36364L0 27.6364C0 28.7937 0.459739 29.9036 1.27808 30.7219C2.09642 31.5403 3.20633 32 4.36364 32H27.6364C28.7937 32 29.9036 31.5403 30.7219 30.7219C31.5403 29.9036 32 28.7937 32 27.6364V4.36364C32 3.20633 31.5403 2.09642 30.7219 1.27808C29.9036 0.459739 28.7937 0 27.6364 0ZM10.9091 25.3236C10.9093 25.4124 10.8921 25.5003 10.8583 25.5823C10.8245 25.6644 10.7748 25.739 10.7122 25.8018C10.6495 25.8646 10.5751 25.9145 10.4931 25.9485C10.4111 25.9825 10.3233 26 10.2345 26H7.36C7.27111 26.0002 7.18305 25.9829 7.10088 25.949C7.01872 25.9151 6.94406 25.8653 6.8812 25.8024C6.81835 25.7396 6.76854 25.6649 6.73463 25.5828C6.70073 25.5006 6.6834 25.4125 6.68364 25.3236V13.2727C6.68364 13.0933 6.7549 12.9213 6.88174 12.7945C7.00858 12.6676 7.18062 12.5964 7.36 12.5964H10.2345C10.4136 12.5968 10.5852 12.6683 10.7116 12.7951C10.8381 12.9219 10.9091 13.0937 10.9091 13.2727V25.3236ZM8.79636 11.4545C8.25696 11.4545 7.72967 11.2946 7.28117 10.9949C6.83267 10.6952 6.48311 10.2693 6.27669 9.77096C6.07027 9.27261 6.01626 8.72425 6.12149 8.19521C6.22673 7.66617 6.48647 7.18022 6.86789 6.7988C7.24931 6.41738 7.73526 6.15764 8.2643 6.0524C8.79334 5.94717 9.3417 6.00118 9.84005 6.2076C10.3384 6.41402 10.7643 6.76358 11.064 7.21208C11.3637 7.66058 11.5236 8.18787 11.5236 8.72727C11.5236 9.45059 11.2363 10.1443 10.7248 10.6557C10.2134 11.1672 9.51968 11.4545 8.79636 11.4545ZM25.9345 25.3709C25.9348 25.4526 25.9189 25.5336 25.8877 25.6092C25.8565 25.6847 25.8107 25.7533 25.753 25.8111C25.6952 25.8689 25.6265 25.9147 25.551 25.9459C25.4754 25.977 25.3945 25.993 25.3127 25.9927H22.2218C22.1401 25.993 22.0591 25.977 21.9836 25.9459C21.908 25.9147 21.8394 25.8689 21.7816 25.8111C21.7238 25.7533 21.678 25.6847 21.6468 25.6092C21.6157 25.5336 21.5998 25.4526 21.6 25.3709V19.7255C21.6 18.8818 21.8473 16.0309 19.3945 16.0309C17.4945 16.0309 17.1073 17.9818 17.0309 18.8582V25.3782C17.0309 25.5415 16.9667 25.6983 16.852 25.8147C16.7374 25.931 16.5815 25.9976 16.4182 26H13.4327C13.3512 26 13.2704 25.9839 13.195 25.9526C13.1197 25.9214 13.0513 25.8755 12.9937 25.8178C12.9361 25.76 12.8904 25.6914 12.8594 25.616C12.8283 25.5406 12.8125 25.4598 12.8127 25.3782V13.22C12.8125 13.1384 12.8283 13.0576 12.8594 12.9822C12.8904 12.9067 12.9361 12.8382 12.9937 12.7804C13.0513 12.7227 13.1197 12.6768 13.195 12.6455C13.2704 12.6143 13.3512 12.5982 13.4327 12.5982H16.4182C16.5831 12.5982 16.7413 12.6637 16.8579 12.7803C16.9745 12.8969 17.04 13.0551 17.04 13.22V14.2709C17.7455 13.2109 18.7909 12.3964 21.0218 12.3964C25.9636 12.3964 25.9309 17.0109 25.9309 19.5455L25.9345 25.3709Z" fill="#1B75BB"/>
+                        </svg>
+                        
+                </a>
+                </div>
+
+            </div>
+            
+            <!-- Team Member 4 -->
+            <div class="bg-white">
+                <div class="mb-4">
+                    <img 
+                        src="/assets/images/whoweare/team4.jpg?height=300&width=300&query=professional headshot of man with beard in dark suit with red tie" 
+                        alt="Sherif Assad" 
+                        class="w-full h-auto"
+                    >
+                </div>
+                <div class="flex items-center justify-between mb-4">    
+                    <div>
+                <h3 class="text-lg font-bold mb-1">Sherif Assad</h3>
+                <p class="text-gray-600 text-sm mb-2">Head of Technology</p>
+                </div>
+                <a href="#" class="inline-block">
+                    <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.6364 0H4.36364C3.20633 0 2.09642 0.459739 1.27808 1.27808C0.459739 2.09642 0 3.20633 0 4.36364L0 27.6364C0 28.7937 0.459739 29.9036 1.27808 30.7219C2.09642 31.5403 3.20633 32 4.36364 32H27.6364C28.7937 32 29.9036 31.5403 30.7219 30.7219C31.5403 29.9036 32 28.7937 32 27.6364V4.36364C32 3.20633 31.5403 2.09642 30.7219 1.27808C29.9036 0.459739 28.7937 0 27.6364 0ZM10.9091 25.3236C10.9093 25.4124 10.8921 25.5003 10.8583 25.5823C10.8245 25.6644 10.7748 25.739 10.7122 25.8018C10.6495 25.8646 10.5751 25.9145 10.4931 25.9485C10.4111 25.9825 10.3233 26 10.2345 26H7.36C7.27111 26.0002 7.18305 25.9829 7.10088 25.949C7.01872 25.9151 6.94406 25.8653 6.8812 25.8024C6.81835 25.7396 6.76854 25.6649 6.73463 25.5828C6.70073 25.5006 6.6834 25.4125 6.68364 25.3236V13.2727C6.68364 13.0933 6.7549 12.9213 6.88174 12.7945C7.00858 12.6676 7.18062 12.5964 7.36 12.5964H10.2345C10.4136 12.5968 10.5852 12.6683 10.7116 12.7951C10.8381 12.9219 10.9091 13.0937 10.9091 13.2727V25.3236ZM8.79636 11.4545C8.25696 11.4545 7.72967 11.2946 7.28117 10.9949C6.83267 10.6952 6.48311 10.2693 6.27669 9.77096C6.07027 9.27261 6.01626 8.72425 6.12149 8.19521C6.22673 7.66617 6.48647 7.18022 6.86789 6.7988C7.24931 6.41738 7.73526 6.15764 8.2643 6.0524C8.79334 5.94717 9.3417 6.00118 9.84005 6.2076C10.3384 6.41402 10.7643 6.76358 11.064 7.21208C11.3637 7.66058 11.5236 8.18787 11.5236 8.72727C11.5236 9.45059 11.2363 10.1443 10.7248 10.6557C10.2134 11.1672 9.51968 11.4545 8.79636 11.4545ZM25.9345 25.3709C25.9348 25.4526 25.9189 25.5336 25.8877 25.6092C25.8565 25.6847 25.8107 25.7533 25.753 25.8111C25.6952 25.8689 25.6265 25.9147 25.551 25.9459C25.4754 25.977 25.3945 25.993 25.3127 25.9927H22.2218C22.1401 25.993 22.0591 25.977 21.9836 25.9459C21.908 25.9147 21.8394 25.8689 21.7816 25.8111C21.7238 25.7533 21.678 25.6847 21.6468 25.6092C21.6157 25.5336 21.5998 25.4526 21.6 25.3709V19.7255C21.6 18.8818 21.8473 16.0309 19.3945 16.0309C17.4945 16.0309 17.1073 17.9818 17.0309 18.8582V25.3782C17.0309 25.5415 16.9667 25.6983 16.852 25.8147C16.7374 25.931 16.5815 25.9976 16.4182 26H13.4327C13.3512 26 13.2704 25.9839 13.195 25.9526C13.1197 25.9214 13.0513 25.8755 12.9937 25.8178C12.9361 25.76 12.8904 25.6914 12.8594 25.616C12.8283 25.5406 12.8125 25.4598 12.8127 25.3782V13.22C12.8125 13.1384 12.8283 13.0576 12.8594 12.9822C12.8904 12.9067 12.9361 12.8382 12.9937 12.7804C13.0513 12.7227 13.1197 12.6768 13.195 12.6455C13.2704 12.6143 13.3512 12.5982 13.4327 12.5982H16.4182C16.5831 12.5982 16.7413 12.6637 16.8579 12.7803C16.9745 12.8969 17.04 13.0551 17.04 13.22V14.2709C17.7455 13.2109 18.7909 12.3964 21.0218 12.3964C25.9636 12.3964 25.9309 17.0109 25.9309 19.5455L25.9345 25.3709Z" fill="#1B75BB"/>
+                        </svg>
+                        
+                </a>
+                </div>
+            </div>
+            
+            <!-- Team Member 5 -->
+            <div class="bg-white sm:col-start-1 lg:col-start-2">
+                <div class="mb-4">
+                    <img 
+                        src="/assets/images/whoweare/team5.jpg?height=300&width=300&query=professional headshot of middle eastern man with beard in traditional attire" 
+                        alt="Turki Al-Otaibi" 
+                        class="w-full h-auto"
+                    >
+                </div>
+                <div class="flex items-center justify-between mb-4">    
+                    <div>
+                <h3 class="text-lg font-bold mb-1">Turki Al-Otaibi</h3>
+                <p class="text-gray-600 text-sm mb-2">Head of Learning & Development</p>
+                    </div>
+                    <a href="#" class="inline-block">
+                        <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.6364 0H4.36364C3.20633 0 2.09642 0.459739 1.27808 1.27808C0.459739 2.09642 0 3.20633 0 4.36364L0 27.6364C0 28.7937 0.459739 29.9036 1.27808 30.7219C2.09642 31.5403 3.20633 32 4.36364 32H27.6364C28.7937 32 29.9036 31.5403 30.7219 30.7219C31.5403 29.9036 32 28.7937 32 27.6364V4.36364C32 3.20633 31.5403 2.09642 30.7219 1.27808C29.9036 0.459739 28.7937 0 27.6364 0ZM10.9091 25.3236C10.9093 25.4124 10.8921 25.5003 10.8583 25.5823C10.8245 25.6644 10.7748 25.739 10.7122 25.8018C10.6495 25.8646 10.5751 25.9145 10.4931 25.9485C10.4111 25.9825 10.3233 26 10.2345 26H7.36C7.27111 26.0002 7.18305 25.9829 7.10088 25.949C7.01872 25.9151 6.94406 25.8653 6.8812 25.8024C6.81835 25.7396 6.76854 25.6649 6.73463 25.5828C6.70073 25.5006 6.6834 25.4125 6.68364 25.3236V13.2727C6.68364 13.0933 6.7549 12.9213 6.88174 12.7945C7.00858 12.6676 7.18062 12.5964 7.36 12.5964H10.2345C10.4136 12.5968 10.5852 12.6683 10.7116 12.7951C10.8381 12.9219 10.9091 13.0937 10.9091 13.2727V25.3236ZM8.79636 11.4545C8.25696 11.4545 7.72967 11.2946 7.28117 10.9949C6.83267 10.6952 6.48311 10.2693 6.27669 9.77096C6.07027 9.27261 6.01626 8.72425 6.12149 8.19521C6.22673 7.66617 6.48647 7.18022 6.86789 6.7988C7.24931 6.41738 7.73526 6.15764 8.2643 6.0524C8.79334 5.94717 9.3417 6.00118 9.84005 6.2076C10.3384 6.41402 10.7643 6.76358 11.064 7.21208C11.3637 7.66058 11.5236 8.18787 11.5236 8.72727C11.5236 9.45059 11.2363 10.1443 10.7248 10.6557C10.2134 11.1672 9.51968 11.4545 8.79636 11.4545ZM25.9345 25.3709C25.9348 25.4526 25.9189 25.5336 25.8877 25.6092C25.8565 25.6847 25.8107 25.7533 25.753 25.8111C25.6952 25.8689 25.6265 25.9147 25.551 25.9459C25.4754 25.977 25.3945 25.993 25.3127 25.9927H22.2218C22.1401 25.993 22.0591 25.977 21.9836 25.9459C21.908 25.9147 21.8394 25.8689 21.7816 25.8111C21.7238 25.7533 21.678 25.6847 21.6468 25.6092C21.6157 25.5336 21.5998 25.4526 21.6 25.3709V19.7255C21.6 18.8818 21.8473 16.0309 19.3945 16.0309C17.4945 16.0309 17.1073 17.9818 17.0309 18.8582V25.3782C17.0309 25.5415 16.9667 25.6983 16.852 25.8147C16.7374 25.931 16.5815 25.9976 16.4182 26H13.4327C13.3512 26 13.2704 25.9839 13.195 25.9526C13.1197 25.9214 13.0513 25.8755 12.9937 25.8178C12.9361 25.76 12.8904 25.6914 12.8594 25.616C12.8283 25.5406 12.8125 25.4598 12.8127 25.3782V13.22C12.8125 13.1384 12.8283 13.0576 12.8594 12.9822C12.8904 12.9067 12.9361 12.8382 12.9937 12.7804C13.0513 12.7227 13.1197 12.6768 13.195 12.6455C13.2704 12.6143 13.3512 12.5982 13.4327 12.5982H16.4182C16.5831 12.5982 16.7413 12.6637 16.8579 12.7803C16.9745 12.8969 17.04 13.0551 17.04 13.22V14.2709C17.7455 13.2109 18.7909 12.3964 21.0218 12.3964C25.9636 12.3964 25.9309 17.0109 25.9309 19.5455L25.9345 25.3709Z" fill="#1B75BB"/>
+                            </svg>
+                            
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Team Member 6 -->
+            <div class="bg-white sm:col-start-2 lg:col-start-3">
+                <div class="mb-4">
+                    <img 
+                        src="/assets/images/whoweare/team6.jpg?height=300&width=300&query=headshot of middle eastern woman in hijab" 
+                        alt="Hala Al-Tamimi" 
+                        class="w-full h-auto"
+                    >
+                </div>
+                <div class="flex items-center justify-between mb-4">    
+                    <div>
+                <h3 class="text-lg font-bold mb-1">Hala Al-Tamimi</h3>
+                <p class="text-gray-600 text-sm mb-2">Director of Partnerships</p>
+                </div>
+
+                <a href="#" class="inline-block">
+                    <svg width="25" height="25" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M27.6364 0H4.36364C3.20633 0 2.09642 0.459739 1.27808 1.27808C0.459739 2.09642 0 3.20633 0 4.36364L0 27.6364C0 28.7937 0.459739 29.9036 1.27808 30.7219C2.09642 31.5403 3.20633 32 4.36364 32H27.6364C28.7937 32 29.9036 31.5403 30.7219 30.7219C31.5403 29.9036 32 28.7937 32 27.6364V4.36364C32 3.20633 31.5403 2.09642 30.7219 1.27808C29.9036 0.459739 28.7937 0 27.6364 0ZM10.9091 25.3236C10.9093 25.4124 10.8921 25.5003 10.8583 25.5823C10.8245 25.6644 10.7748 25.739 10.7122 25.8018C10.6495 25.8646 10.5751 25.9145 10.4931 25.9485C10.4111 25.9825 10.3233 26 10.2345 26H7.36C7.27111 26.0002 7.18305 25.9829 7.10088 25.949C7.01872 25.9151 6.94406 25.8653 6.8812 25.8024C6.81835 25.7396 6.76854 25.6649 6.73463 25.5828C6.70073 25.5006 6.6834 25.4125 6.68364 25.3236V13.2727C6.68364 13.0933 6.7549 12.9213 6.88174 12.7945C7.00858 12.6676 7.18062 12.5964 7.36 12.5964H10.2345C10.4136 12.5968 10.5852 12.6683 10.7116 12.7951C10.8381 12.9219 10.9091 13.0937 10.9091 13.2727V25.3236ZM8.79636 11.4545C8.25696 11.4545 7.72967 11.2946 7.28117 10.9949C6.83267 10.6952 6.48311 10.2693 6.27669 9.77096C6.07027 9.27261 6.01626 8.72425 6.12149 8.19521C6.22673 7.66617 6.48647 7.18022 6.86789 6.7988C7.24931 6.41738 7.73526 6.15764 8.2643 6.0524C8.79334 5.94717 9.3417 6.00118 9.84005 6.2076C10.3384 6.41402 10.7643 6.76358 11.064 7.21208C11.3637 7.66058 11.5236 8.18787 11.5236 8.72727C11.5236 9.45059 11.2363 10.1443 10.7248 10.6557C10.2134 11.1672 9.51968 11.4545 8.79636 11.4545ZM25.9345 25.3709C25.9348 25.4526 25.9189 25.5336 25.8877 25.6092C25.8565 25.6847 25.8107 25.7533 25.753 25.8111C25.6952 25.8689 25.6265 25.9147 25.551 25.9459C25.4754 25.977 25.3945 25.993 25.3127 25.9927H22.2218C22.1401 25.993 22.0591 25.977 21.9836 25.9459C21.908 25.9147 21.8394 25.8689 21.7816 25.8111C21.7238 25.7533 21.678 25.6847 21.6468 25.6092C21.6157 25.5336 21.5998 25.4526 21.6 25.3709V19.7255C21.6 18.8818 21.8473 16.0309 19.3945 16.0309C17.4945 16.0309 17.1073 17.9818 17.0309 18.8582V25.3782C17.0309 25.5415 16.9667 25.6983 16.852 25.8147C16.7374 25.931 16.5815 25.9976 16.4182 26H13.4327C13.3512 26 13.2704 25.9839 13.195 25.9526C13.1197 25.9214 13.0513 25.8755 12.9937 25.8178C12.9361 25.76 12.8904 25.6914 12.8594 25.616C12.8283 25.5406 12.8125 25.4598 12.8127 25.3782V13.22C12.8125 13.1384 12.8283 13.0576 12.8594 12.9822C12.8904 12.9067 12.9361 12.8382 12.9937 12.7804C13.0513 12.7227 13.1197 12.6768 13.195 12.6455C13.2704 12.6143 13.3512 12.5982 13.4327 12.5982H16.4182C16.5831 12.5982 16.7413 12.6637 16.8579 12.7803C16.9745 12.8969 17.04 13.0551 17.04 13.22V14.2709C17.7455 13.2109 18.7909 12.3964 21.0218 12.3964C25.9636 12.3964 25.9309 17.0109 25.9309 19.5455L25.9345 25.3709Z" fill="#1B75BB"/>
+                        </svg>
+                        
+                </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-gray-100 py-8 px-6">
+    <div class="container mx-auto">
+        <!-- Top Section -->
+        <div class="flex grid-cols-1 md:grid-cols-3 gap-8 justify-between">
+            <!-- Links -->
+            <div class="grid grid-cols-2 gap-6 text-gray-900">
+                <div>
+                    <h4 class="font-semibold">Courses</h4>
+                    <ul class="mt-2 space-y-2">
+                        <li><a href="#" class="hover:underline">Who We Are</a></li>
+                        <li><a href="#" class="hover:underline">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold">News</h4>
+                    <ul class="mt-2 space-y-2">
+                        <li><a href="#" class="hover:underline">Media Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Logo -->
+            <div class="flex justify-center md:justify-end">
+                <img src="./assets/images/Logo.png" alt="Learning Space Logo" class="h-12">
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <hr class="my-6 border-gray-300">
+
+        <!-- Bottom Section -->
+        <div class="flex flex-col md:flex-row justify-between items-center text-gray-700 text-sm">
+            <div class="flex flex-col space-y-2">
+                <p>Riyadh King Abdul Aziz Branch Rd, </p>
+                <p>Alyasmin, Riyadh 13322, KSA</p>
+            </div>
+            <div class="space-y-6">
+                <p class="text-gray-400 text-xs">© 2024 LEARNING SPACE COMPANY, INC. ALL RIGHTS RESERVED.</p>
+                <!-- Social Icons -->
+                <div class="flex space-x-4 mt-4 md:mt-0 justify-end">
+                    <a href="#" class="text-gray-700 hover:text-black">
+                        <img src="./assets/images/icons/social/linkedin.png" alt="">
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-black">
+                        <img src="./assets/images/icons/social/x.png" alt="">
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-black">
+                        <img src="./assets/images/icons/social/facebook.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
